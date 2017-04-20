@@ -1,0 +1,40 @@
+extends layout
+
+block content
+	section#top.pad-top-100
+		.container
+			#homepage-content.container
+				h1.center Hi I'm Alex
+				#header-image.center
+					img(src="/images/alex-homepage.jpg")
+				#skill-section.row
+					#header-skills.center
+						ul
+							li Marketer
+								.skill-logo
+									img(src="/images/diagram.png")
+							li Developer
+								.skill-logo
+									img(src="/images/computer.png")
+							li Traveler
+								.skill-logo
+									img(src="/images/mountain.png")
+					.red-button.center(style="display:none")
+						a(href="#") Learn More	          
+	section#one.clear
+		.container
+			.header.center
+				h2 A little something about me
+				.image-holder
+					img(src="/images/alex-teeth.jpg")
+			.header-text.center
+				p Hi there, and thanks again for stopping by. My name is Alex Acker and I'm an experienced growth marketer currently based in San Francsico, CA. For the longest time my roots have been based in digital performance marketing but have seen grown to include Web Analytics and Site Testing and Planning If you're looking for some work in consulting please contact me via one of my social profiles.
+				br
+				p Today though my focus and personal growth is in Front End Web Development including this site and the projects within it. I'm constantly updating the site with new games and general updates so check in from time to time to see what's new.					
+	section#four.wrapper
+		.background-overlay
+			.container.center
+				h4 Interested in Connecting?
+				p.grey-out Become a connection or send me a note
+				#get-in-touch-section.bottom-button.photo-buttons.center
+					a(href="/contact" class="") GET IN TOUCH				
