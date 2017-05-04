@@ -11,4 +11,6 @@ head
 	if cssInclude
 		link(rel="stylesheet" type="text/css" media="screen" href="/stylesheets/css/" + cssFile +".css")
 	if projects
-		link(rel="stylesheet" type="text/css" media="screen" href="/stylesheets/css/projects/" + projects + ".css")
+		link(rel="stylesheet" type="text/css" media="screen" href="/stylesheets/projects/" + projects + ".css")
+		if projects === 'pagination'
+			link(rel="stylesheet" type="text/css" media="screen" href="/stylesheets/projects/pagination1.css")

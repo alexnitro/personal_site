@@ -15,28 +15,30 @@ router.get('/project', (req,res,next) => {
 	res.render('projects')
 });
 router.get('/contact', (req,res,next) => {
-	res.render('contact')
+	res.render('about')
 });
-router.get('/projects/quote'), (req,res,next) => {
-	res.render('project-quote')
-
-}
-router.get('/projects/pagination'), (req,res,next) => {
-	res.render('project-pagination')
+router.get('/quote', (req,res,next) => {
+	req.locals.project = 'quotes';
+	res.render('quote');
+});
+router.get('/projects/pagination', (req,res,next) => {
+	res.locals.projects = 'pagination';
+	res.render('pagination')
+});
+router.get('/projects/bootstrap-form', (req,res,next) => {
+	res.locals.css = '';
+	res.locals.project = ''
+	res.render('form')
+});
+router.get('/projects/tic-tac-toe', (req,res,next) => {
+	res.locals.css =
+	res.locals.project = 'tictactoe';
+	res.render('tictactoe')
 	
-}
-router.get('/projects/bootstrap-form'), (req,res,next) => {
-	res.render('project-bootstrap-form')
-	
-}
-router.get('/projects/tic-tac-toe'), (req,res,next) => {
-	res.locals.projects = 'tictactoe';
-	res.render('project-tic-tac-toe')
-	
-}
-router.get('/projects/movie-search-app'), (req,res,next) => {
-	res.render('project-movie-search-app')
-	
-}
+});
+router.get('/projects/movie-search-app', (req,res,next) => {
+	res.locals.css = ''
+	res.render('moviesearch')	
+});
 
 module.exports = router;
