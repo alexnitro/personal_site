@@ -1,0 +1,51 @@
+extends layout.pug
+
+block content
+  section#form-area.pad-top-100
+    .container
+      #form-holder
+        .text-area
+          h1.center Don&apos;t be Shy, I&apos;m here to help
+          p.lead From marketing to campaigns, I have to experience to make a difference.
+          .icons
+            ul
+              li
+                img(src='/images/speedometer.png')
+              li
+                img(src='/images/science.png')
+              li
+                img(src='/images/arrow.png')
+              li
+                img(src='/images/business-site.png')
+        form
+          #input
+            .form-group
+              input#firstNameInput.form-control(type='text', placeholder='First Name', value='')
+            .form-group
+              input#lastNameInput.form-control(type='text', placeholder='Last Name', value='')
+            .form-group
+              input#emailInput.form-control(type='email', placeholder='Email', value='')
+            .form-group
+              textarea#helpInput.form-control(placeholder='How can I help?', rows='5', value='')
+            |  
+            button#form-button.btn.btn-default(type='submit', onclick='submitForm()') Submit
+  section#freelance-work
+    .container
+      .row
+        h2 I Love to Build Stuff
+        .rounded-image-holder
+          .rounded-image
+        h3 Let me build something for you
+      .row
+        .image-row
+          img(src='/images/house.png')
+          |  
+          img(src='/images/sand-castle.png')
+          |  
+          img(src='/images/hotel.png')
+          |  
+          img(src='/images/house-white.png')
+          |  
+          img(src='/images/shop.png')
+          |  
+          img(src='/images/house-orange.png')

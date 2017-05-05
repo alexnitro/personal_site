@@ -15,7 +15,7 @@ router.get('/project', (req,res,next) => {
 	res.render('projects')
 });
 router.get('/contact', (req,res,next) => {
-	res.render('about')
+	res.render('contact')
 });
 router.get('/quote', (req,res,next) => {
 	req.locals.project = 'quotes';

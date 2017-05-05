@@ -934,7 +934,7 @@ img.palms2 {
 }
 
 #freelance-work .rounded-image {
-	background: url('../img/alex-looking-homepage.jpg');
+	background: url('/images/alex-looking-homepage.jpg');
 	background-size: cover;
 	background-color: rgba(0,0,0,0.2);
 	width: 200px;
