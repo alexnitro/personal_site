@@ -1,10 +1,13 @@
-.container
-  #quote-box
-    p.quote You can do anything but not everything
-    p.source
-      | David Allen
-      span.citation Making It All Work
-      span.year 2009
-  |  
-  button#loadQuote Show another quote
-script(src="/javascripts/projects/quotes.js")
+extends layout.pug
+
+block content
+	.container
+		#quote-box
+			p.quote You can do anything but not everything
+			p.source
+			| David Allen
+			span.citation Making It All Work
+			span.year 2009
+			|  
+		button#loadQuote Show another quote
+	script(src='/javascripts/projects/quotes.js')

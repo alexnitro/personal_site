@@ -10,7 +10,11 @@ head
 	link(rel="stylesheet", type="text/css" href="/stylesheets/main.css")
 	if cssInclude
 		link(rel="stylesheet" type="text/css" media="screen" href="/stylesheets/css/" + cssFile +".css")
-	if projects
+	if projects !== 'form'
 		link(rel="stylesheet" type="text/css" media="screen" href="/stylesheets/projects/" + projects + ".css")
 		if projects === 'pagination'
 			link(rel="stylesheet" type="text/css" media="screen" href="/stylesheets/projects/pagination1.css")
+	if projects === 'form'
+		link(rel='stylesheet' type='text/css' media='screen' href='/stylesheets/projects/form/style.css')
+		link(rel='stylesheet' type='text/css' media='screen' href='/stylesheets/projects/form/form.css')
+		

@@ -355,14 +355,14 @@ input.missing {
       margin-right: 0; }
     .boxes .box-filled-1 {
       
-      background-image: url(../img/o.svg); }
+      background-image: url(/images/projects/o.svg); }
 
     .boxes .box-filled-1.filled {
       background-color: #FFA000;
     }
     .boxes .box-filled-2 {
       
-      background-image: url(../img/x.svg); }
+      background-image: url(/images/projects/x.svg); }
     .boxes .box-filled-2.filled {
       background-color: #3688C3;;
     }

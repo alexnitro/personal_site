@@ -5,4 +5,5 @@ html
   body(class="lang-en")
     include ./_partials/_nav.pug
     block content
-    include ./_partials/_footer.pug
+    if projects !== 'quotes'
+     include ./_partials/_footer.pug

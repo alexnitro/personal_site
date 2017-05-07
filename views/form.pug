@@ -1,143 +1,146 @@
-.container
-  header
-    span Register for
-    h1 Full Stack Conf
-  form(action='index.html', method='post')
-    fieldset
-      legend Basic Info
-      |  
-      label(for='name') Name:
-      |  
-      input#name(type='text', name='user_name')
-      |  
-      label(for='mail') Email:
-      |  
-      input#mail(type='email', name='user_email')
-      #title-area
-        label Job Role
+extends layout.pug
+
+block content
+  .container
+    header
+      span Register for
+      h1 Full Stack Conf
+    form(action='index.html', method='post')
+      fieldset
+        legend Basic Info
         |  
-        select#title.turnintodropdown(name='user_title')
-          option(value='select-job') Select your title
-          option(value='full-stack js developer') Full Stack JavaScript Developer
-          option(value='front-end developer') Front End Developer
-          option(value='back-end developer') Back End Developer
-          option(value='designer') Designer
-          option(value='student') Student
-          option(value='other') Other
-    fieldset.shirt
-      legend T-Shirt Info
-      #size
-        label(for='size') Size:
+        label(for='name') Name:
         |  
-        select#size.turnintodropdown(name='user_size')
-          option(value='select') Size
-          option(value='small') S
-          option(value='medium', selected='') M
-          option(value='large') L
-          option(value='extra large') XL
-      #design
-        label(for='design') Design:
+        input#name(type='text', name='user_name')
         |  
-        select#design.turnintodropdown(name='user_design')
-          option Select Theme
-          option(value='js puns') Theme - JS Puns
-          option(value='heart js') Theme - I &hearts; JS
-      #colors
-        label(for='color') Color:
+        label(for='mail') Email:
         |  
-        select#color.turnintodropdown
-          option(value='select', data-shirt-type='initial-selection')
-            --(select='', a='', theme='', first<='', option='')
-              option(value='cornflowerblue', data-shirt-type='js-puns') Cornflower Blue
-              option(value='darkslategrey', data-shirt-type='js-puns') Dark Slate Grey
-              option(value='gold', data-shirt-type='js-puns') Gold
-              option(value='tomato', data-shirt-type='i-love-js') Tomato
-              option(value='steelblue', data-shirt-type='i-love-js') Steel Blue
-              option(value='dimgrey', data-shirt-type='i-love-js') Dim Grey
-    fieldset.activities
-      legend Register for Activities
-      |  
-      label
-        input(type='checkbox', name='all', data-time-type='all')
-        |  Main Conference &mdash; $200
-      |  
-      label
-        input(type='checkbox', name='js-frameworks', data-time-type='tuesday-morning')
-        |  JavaScript Frameworks Workshop &mdash; Tuesday 9am-12pm, $100
-      |  
-      label
-        input(type='checkbox', name='js-libs', data-time-type='tuesday-afternoon')
-        |  JavaScript Libraries Workshop &mdash; Tuesday 1pm-4pm, $100
-      |  
-      label
-        input(type='checkbox', name='express', data-time-type='tuesday-morning')
-        |  Express Workshop &mdash; Tuesday 9am-12pm, $100
-      |  
-      label
-        input(type='checkbox', name='node', data-time-type='tuesday-afternoon')
-        |  Node.js Workshop &mdash; Tuesday 1pm-4pm, $100
-      |  
-      label
-        input(type='checkbox', name='build-tools', data-time-type='wednesday-morning')
-        |  Build tools Workshop &mdash; Wednesday 9am-12pm, $100
-      |  
-      label
-        input(type='checkbox', name='npm', data-time-type='wednesday-afternoon')
-        |  npm Workshop &mdash; Wednesday 1pm-4pm, $100
-      span.payment-total
-    fieldset
-      legend Payment Info
-      #payment-area
-        label(for='payment') I&apos;m going to pay with:
-        |  
-        select#payment.turnintodropdown(name='user_payment')
-          option(value='select_method') Select Payment Method
-          option(value='credit card') Credit Card
-          option(value='paypal') PayPal
-          option(value='bitcoin') Bitcoin
-      #credit-card.credit-card
-        .col-6.col
-          label(for='cc-num') Card Number:
+        input#mail(type='email', name='user_email')
+        #title-area
+          label Job Role
           |  
-          input#cc-num(name='user_cc-num', type='text')
-        .col-3.col
-          label(for='zip') Zip Code:
+          select#title.turnintodropdown(name='user_title')
+            option(value='select-job') Select your title
+            option(value='full-stack js developer') Full Stack JavaScript Developer
+            option(value='front-end developer') Front End Developer
+            option(value='back-end developer') Back End Developer
+            option(value='designer') Designer
+            option(value='student') Student
+            option(value='other') Other
+      fieldset.shirt
+        legend T-Shirt Info
+        #size
+          label(for='size') Size:
           |  
-          input#zip(name='user_zip', type='text')
-        .col-3.col
-          label(for='cvv') CVV:
+          select#size.turnintodropdown(name='user_size')
+            option(value='select') Size
+            option(value='small') S
+            option(value='medium', selected='') M
+            option(value='large') L
+            option(value='extra large') XL
+        #design
+          label(for='design') Design:
           |  
-          input#cvv(name='user_cvv', type='text')
-        #month
-          label Expiration Date:
+          select#design.turnintodropdown(name='user_design')
+            option Select Theme
+            option(value='js puns') Theme - JS Puns
+            option(value='heart js') Theme - I &hearts; JS
+        #colors
+          label(for='color') Color:
           |  
-          select#exp-month.turnintodropdown(name='user_exp-month')
-            option(value='0') Month
-            option(value='1') 1 - January
-            option(value='2') 2 - February
-            option(value='3') 3 - March
-            option(value='4') 4 - April
-            option(value='5') 5 - May
-            option(value='6') 6 - June
-            option(value='7') 7 - July
-            option(value='8') 8 - August
-            option(value='9') 9 - September
-            option(value='10') 10 - October
-            option(value='11') 11 - November
-            option(value='12') 12 - December
-        #year
-          select#exp-year.turnintodropdown(name='user_exp-year')
-            option(value='year') Year
-            option(value='2016') 2016
-            option(value='2017') 2017
-            option(value='2018') 2018
-            option(value='2019') 2019
-            option(value='2020') 2020
-      .paypal
-        p
-          | If you selected the PayPal option we&apos;ll take you to Paypal&apos;s site to set up your billing information, when you click &ldquo;Register&rdquo; below.
-      .bitcoin
-        p
-          | If you selected the Bitcoin option we&apos;ll take you to the Coinbase site to set up your billing information. Due to the nature of exchanging Bitcoin, all Bitcoin transactions will be final.
-    |  
-    button(type='submit') Register
+          select#color.turnintodropdown
+            option(value='select', data-shirt-type='initial-selection')
+              --(select='', a='', theme='', first<='', option='')
+                option(value='cornflowerblue', data-shirt-type='js-puns') Cornflower Blue
+                option(value='darkslategrey', data-shirt-type='js-puns') Dark Slate Grey
+                option(value='gold', data-shirt-type='js-puns') Gold
+                option(value='tomato', data-shirt-type='i-love-js') Tomato
+                option(value='steelblue', data-shirt-type='i-love-js') Steel Blue
+                option(value='dimgrey', data-shirt-type='i-love-js') Dim Grey
+      fieldset.activities
+        legend Register for Activities
+        |  
+        label
+          input(type='checkbox', name='all', data-time-type='all')
+          |  Main Conference &mdash; $200
+        |  
+        label
+          input(type='checkbox', name='js-frameworks', data-time-type='tuesday-morning')
+          |  JavaScript Frameworks Workshop &mdash; Tuesday 9am-12pm, $100
+        |  
+        label
+          input(type='checkbox', name='js-libs', data-time-type='tuesday-afternoon')
+          |  JavaScript Libraries Workshop &mdash; Tuesday 1pm-4pm, $100
+        |  
+        label
+          input(type='checkbox', name='express', data-time-type='tuesday-morning')
+          |  Express Workshop &mdash; Tuesday 9am-12pm, $100
+        |  
+        label
+          input(type='checkbox', name='node', data-time-type='tuesday-afternoon')
+          |  Node.js Workshop &mdash; Tuesday 1pm-4pm, $100
+        |  
+        label
+          input(type='checkbox', name='build-tools', data-time-type='wednesday-morning')
+          |  Build tools Workshop &mdash; Wednesday 9am-12pm, $100
+        |  
+        label
+          input(type='checkbox', name='npm', data-time-type='wednesday-afternoon')
+          |  npm Workshop &mdash; Wednesday 1pm-4pm, $100
+        span.payment-total
+      fieldset
+        legend Payment Info
+        #payment-area
+          label(for='payment') I&apos;m going to pay with:
+          |  
+          select#payment.turnintodropdown(name='user_payment')
+            option(value='select_method') Select Payment Method
+            option(value='credit card') Credit Card
+            option(value='paypal') PayPal
+            option(value='bitcoin') Bitcoin
+        #credit-card.credit-card
+          .col-6.col
+            label(for='cc-num') Card Number:
+            |  
+            input#cc-num(name='user_cc-num', type='text')
+          .col-3.col
+            label(for='zip') Zip Code:
+            |  
+            input#zip(name='user_zip', type='text')
+          .col-3.col
+            label(for='cvv') CVV:
+            |  
+            input#cvv(name='user_cvv', type='text')
+          #month
+            label Expiration Date:
+            |  
+            select#exp-month.turnintodropdown(name='user_exp-month')
+              option(value='0') Month
+              option(value='1') 1 - January
+              option(value='2') 2 - February
+              option(value='3') 3 - March
+              option(value='4') 4 - April
+              option(value='5') 5 - May
+              option(value='6') 6 - June
+              option(value='7') 7 - July
+              option(value='8') 8 - August
+              option(value='9') 9 - September
+              option(value='10') 10 - October
+              option(value='11') 11 - November
+              option(value='12') 12 - December
+          #year
+            select#exp-year.turnintodropdown(name='user_exp-year')
+              option(value='year') Year
+              option(value='2016') 2016
+              option(value='2017') 2017
+              option(value='2018') 2018
+              option(value='2019') 2019
+              option(value='2020') 2020
+        .paypal
+          p
+            | If you selected the PayPal option we&apos;ll take you to Paypal&apos;s site to set up your billing information, when you click &ldquo;Register&rdquo; below.
+        .bitcoin
+          p
+            | If you selected the Bitcoin option we&apos;ll take you to the Coinbase site to set up your billing information. Due to the nature of exchanging Bitcoin, all Bitcoin transactions will be final.
+      |  
+      button(type='submit') Register

@@ -2,23 +2,27 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', (req,res,next) => {
-	res.locals.title = "My Wonderful Website"
-	res.locals.page = "homepage"
+	res.locals.title = "My Wonderful Website";
+	res.locals.page = "homepage";
+	res.locals.pageType = 'main';
 	res.render('index')
 });
 router.get('/about', (req,res,next) => {
 	res.locals.page = 'about';
+	res.locals.pageType = 'main';
 	res.render('about');
 });
 router.get('/project', (req,res,next) => {
 	res.locals.page = 'project';
+	res.locals.pageType = 'main';
 	res.render('projects')
 });
 router.get('/contact', (req,res,next) => {
+	res.locals.pageType = 'main';
 	res.render('contact')
 });
-router.get('/quote', (req,res,next) => {
-	req.locals.project = 'quotes';
+router.get('/projects/quote', (req,res,next) => {
+	res.locals.projects = 'quotes';
 	res.render('quote');
 });
 router.get('/projects/pagination', (req,res,next) => {
@@ -26,18 +30,17 @@ router.get('/projects/pagination', (req,res,next) => {
 	res.render('pagination')
 });
 router.get('/projects/bootstrap-form', (req,res,next) => {
-	res.locals.css = '';
-	res.locals.project = ''
+	res.locals.projects = 'form'
 	res.render('form')
 });
 router.get('/projects/tic-tac-toe', (req,res,next) => {
 	res.locals.css =
-	res.locals.project = 'tictactoe';
+	res.locals.projects = 'tictactoe';
 	res.render('tictactoe')
-	
 });
 router.get('/projects/movie-search-app', (req,res,next) => {
-	res.locals.css = ''
+	res.locals.css = 'moviesearch'
+	res.locals.projects = 'moviesearch';
 	res.render('moviesearch')	
 });
 

@@ -24,6 +24,9 @@ if page === 'project'
 		$(this).siblings('.category').toggleClass('active');
 		}
 		});
-if projects
+if projects !== 'form'
 	script(src='/javascripts/projects/' + projects +'.js')
-
+if projects === 'form'
+	script(src='/javascripts/projects/form/select.js')
+	script(src='/javascripts/projects/form/jquery.creditCardValidator.js')
+	script(src='/javascripts/projects/form/form.js')
