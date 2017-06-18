@@ -6,15 +6,7 @@ head
 	link(href="https://fonts.googleapis.com/css?family=Raleway:400,300,500,700" rel="stylesheet" type="text/css")
 	link(rel="stylesheet", type="text/css" href="/stylesheets/bootstrap.min.css")
 	link(rel="stylesheet", type="text/css" href="/stylesheets/normalize.css")
-	link(rel="stylesheet", type="text/css" href="/stylesheets/responsive.css")
-	link(rel="stylesheet", type="text/css" href="/stylesheets/main.css")
-	if cssInclude
-		link(rel="stylesheet" type="text/css" media="screen" href="/stylesheets/css/" + cssFile +".css")
-	if projects !== 'form'
-		link(rel="stylesheet" type="text/css" media="screen" href="/stylesheets/projects/" + projects + ".css")
-		if projects === 'pagination'
-			link(rel="stylesheet" type="text/css" media="screen" href="/stylesheets/projects/pagination1.css")
-	if projects === 'form'
-		link(rel='stylesheet' type='text/css' media='screen' href='/stylesheets/projects/form/style.css')
-		link(rel='stylesheet' type='text/css' media='screen' href='/stylesheets/projects/form/form.css')
+	link(rel="stylesheet", type="text/css" href="/stylesheets/css/responsive-min.css")
+	link(rel="stylesheet", type="text/css" href="/stylesheets/css/main-min.css")
+	block css
 		

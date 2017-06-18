@@ -1,9 +1,10 @@
 doctype html
 html
-  
-  include ./_partials/_head.pug
-  body(class="lang-en")
-    include ./_partials/_nav.pug
-    block content
-    if projects !== 'quotes'
-     include ./_partials/_footer.pug
+	include ./_partials/_head.pug
+	body(class="lang-en")
+		include ./_partials/_nav.pug
+		block content
+		if projects !== 'quotes'
+			include ./_partials/_footer.pug
+		include ./_partials/_globaljs.pug 
+		block javaScript

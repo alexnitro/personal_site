@@ -1,0 +1,1 @@
+!function(){var t=document.getElementsByClassName("button-clear")[0];$(t).click(function(){$("html,body").animate({scrollTop:$("#current").offset().top},600)}),$("#current .project-status span.category").click(function(){if($(this).hasClass("active"))return!1;$(this).toggleClass("active"),$(this).siblings(".category").toggleClass("active")})}();

@@ -1,5 +1,10 @@
 extends layout.pug
 
+block css
+  link(rel='stylesheet', type='text/css' href='/stylesheets/projects/tictactoe.css')  
+block javaScript
+  script(src='/javascripts/projects/tictactoe.js')
+
 block content
   #start.screen.screen-start
     header
@@ -47,7 +52,7 @@ block content
         p#player2-name
       .versus-logo
         p VS
-    ul.boxes
+    ul.boxes.clear
       li.box
       li.box
       li.box

@@ -1,0 +1,928 @@
+@media screen and (min-width: 700px){
+	.container {
+		width: 90%;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	.animate-right {
+		transform: translate(25px, 0);
+		-webkit-transform: translate(25px, 0);
+		-moz-transform: translate(25px, 0);
+		transition: all .8s cubic-bezier(0,0.99,0.29,1.02);
+		-webkit-transition: all .8s cubic-bezier(0,0.99,0.29,1.02);
+		-moz-transition: all .8s cubic-bezier(0,0.99,0.29,1.02);
+		transition-delay: .1s;
+		-webkit-transition-delay: .1s;
+		-moz-transition-delay: .1s;	
+	}
+	.animate-left {
+		transform: translate(-25px, 0);
+		-webkit-transform: translate(-25px, 0);
+		-moz-transform: translate(-125px, 0);
+		transition: all .8s cubic-bezier(0,0.99,0.29,1.02);
+		-webkit-transition: all .8s cubic-bezier(0,0.99,0.29,1.02);
+		-moz-transition: all .8s cubic-bezier(0,0.99,0.29,1.02);
+		transition-delay: .1s;
+		-webkit-transition-delay: .1s;
+		-moz-transition-delay: .1s;	
+
+	}
+	.animate-complete {
+		transform: translate(0,0);
+		-webkit-transform: translate(0,0);
+		-moz-transform: translate(0,0);
+	}
+	.pad-top-100 {
+		padding-top: 100px;
+	}
+	.pad-top-75 {
+		padding-top: 75px;
+	}
+	.pad-top-50 {
+		padding-top: 50px;
+	}
+	.grey-out-box {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0,0,0,0.7);
+		display: none;
+	}
+
+	/********************** NAV *************************
+	*****************************************************/
+
+	.hamburger-menu-desktop {
+		width: 75px;
+		position: absolute;
+		right: 100px;
+		top: 25px;
+		display: none;
+		cursor: pointer;
+	}
+	.nav-links {
+		display: block;
+		position: static;
+		padding: 25px 0;
+		width: 100%;
+		a {
+			color: #FFF;
+		}
+		ul {
+			float: right;
+			li {
+				display: inline-block;
+				margin-left: 45px;
+				font-size: 1em;
+				color: white;
+				padding: 10px 0 10px 0;	
+			}
+		}
+	}
+	.black-nav li a {
+		color: #404040 !important;
+	}
+	.nav-home-link {
+		display: block;
+		float: left;
+		font-size: 1.2em;
+		font-weight: bold;
+		padding: 10px 10px 10px 0px;
+	}
+
+	/********************** HERO *************************
+	*****************************************************/
+
+	#top {
+		min-height: 750px;
+		background: #1D976C; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right bottom,#360033,#300e41,#223166,#105e94);
+		background: linear-gradient(to right bottom,#360033,#300e41,#223166,#105e94);
+		color: #fff;
+	}
+	#homepage-content {
+		opacity: 0;
+		transition: all .8s cubic-bezier(0,0.99,0.29,1.02);
+		transition-delay: .1s;
+		transform: translate(0, -25px);
+		&.animate-complete {
+			transform: translate(0, 0);	
+			-webkit-transform: translate(0,0);
+			-moz-transform: translate(0,0);
+		}
+		h1 {
+			font-size: 5em;
+			margin-top: 25px;
+			margin-bottom: 15px;
+			color: inherit;
+			text-shadow: 1px 1px 3px #000;
+		}
+		h2 {
+			color: inherit;
+			margin-bottom: 200px;
+			text-transform: none;
+		}
+	}
+	#header-skills {
+		margin-top: 40px;
+		margin-bottom: 80px;
+		opacity: 1;
+		transition: opacity .5s linear;
+		-webkit-transition: opacity .5s linear;
+		-moz-transition: opacity .5s linear;
+		-o-transition: opacity .5s linear;
+		li {
+			float: left;
+			color: #fff;
+			font-weight: bold;
+			font-size: 26px;
+			text-shadow: 1px 1px 3px #000;
+			opacity: 0;
+			transition: all .4s linear;
+			-moz-transition: all .4s linear;
+			-webkit-transition:	all .4s linear;
+		}
+	}
+	.skill-logo {
+		margin-top: 20px;
+		img {
+			width: 120px;
+		}
+	}
+	#top {
+		.red-button {
+			margin-top: 50px;
+
+		}
+		p {
+			font-size: 1.7em;	
+		}
+		.background-overlay {
+			padding: 0px;
+			background: rgba(0,0,0,0.0);
+		}
+	} 
+
+	/********************** DESKTOP NAV **************************
+	**************************************************************/
+
+	.transparent {
+		background-color: transparent;
+
+	}
+	.positioning {
+		position: absolute;
+		width: 100%;
+		top: 0px;
+		z-index: 1;
+	}
+
+	/********************** DESKTOP FIXES *************************
+	**************************************************************/
+
+	.desktop-nav {
+		display: block;
+		width: 100%;
+		max-width: 1400px;
+		margin: 0 auto;
+		color: #fff;
+	}
+	.mobile-nav {
+		display: none;
+	}
+	.nav-logo {
+		margin-top: 20px;
+		a {
+			text-decoration: none;
+			color: white;
+			font-size: 1.6em;		
+		}
+	}
+	.nav-items {
+		margin-top: 10px;
+	}
+	.desktop-nav-link {
+		display: none;
+	}
+	#top-nav a {
+		background-color: transparent;
+		border-radius: 0px;
+		padding-top: 0px;
+
+	}
+	.nav-links li a {
+		text-decoration: none;
+		color: #fff;
+		padding: 10px;
+	}
+	#one {
+		padding: 60px 0;
+		background-color: #FAFAFA;
+		opacity: 1;
+		transition: opacity .5s linear;
+		-webkit-transition: opacity .5s linear;
+		-moz-transition: opacity .5s linear;
+		.header {
+			float: left;
+			width: 30%;
+			text-align: left;
+			margin-left: 10%;		
+			h2 {
+				margin-top: 0px;
+				margin-bottom: 30px;		
+			}
+		}
+		.header-text {
+			float: right;
+			width: 35%;
+			margin-right: 10%;
+			text-align: left;	
+			p {
+				font-size: 15px;
+				line-height: 30px;			
+			}	
+		}
+	}
+	.photos-area {
+		padding-top: 25px;
+	}
+	.image{
+		&.fit {
+			float: left;
+			width: 45%;
+			&:nth-child(2){
+				margin-left: 10%;
+			}
+		}
+	}
+	.button.one,
+	.button.two {
+		width: 30%;
+		margin-bottom: 0;
+		display: inline-block;
+	}
+	.one {
+		margin-right: 25%;
+	}
+
+	/* THIS NEEDS TO GET FIXED FOR SHORTER VIEW PORT */
+
+	.image.rounded {
+		width: 35%;
+		float: left;
+	}
+	.content {
+		width: 60%;
+		margin: 0 auto;
+		float: left;
+		text-align: left;
+		p {
+			width: 100%;
+			text-align: left;	
+		}
+	}
+	.image.rounded {
+		margin-right: 5%;
+		img {
+			max-width: 200px;
+			width: 100%;		
+		}
+	}
+	.feature-col {
+		float: left;
+		width: 50%;
+		&:nth-of-type(1){
+			.image {
+				&.rounded {
+					float: right;
+					margin-left: 5%;
+					margin-right: 0px;				
+				}
+			}
+			.content {
+				float: right;
+				text-align: right;
+				p {
+					text-align: right;
+				}
+			}
+		}
+	}
+	.feature {
+		min-height: 300px;
+		padding: 20px;
+	}
+
+	/* FIXED STATIC WIDTH CREATING AWKWARD COLAPSE BETWEEN ELEMENTS */
+
+	/*.feature-grid .feature .image img {
+		width: 150px;
+		height: 150px;
+	} */
+
+	#four .photo-buttons {
+		width: 300px;
+	}
+	#three {
+		opacity: 0;
+		min-height: 750px;
+		transition: opacity .5s linear;
+		-webkit-transition: opacity .5s linear;
+		-moz-transition: opacity .5s linear;	
+	}	
+
+	/*************************  FOOTER ******************************/
+
+	footer {
+		width: 100%;
+
+	}
+
+	/************************* PROJECT PAGE ******************************
+	********************************************************************/
+
+	#current-projects {
+		padding-top: 140px;
+		padding-bottom: 100px;
+		padding-left: 0px;
+		padding-right: 0px;
+		background: linear-gradient(to right bottom,#01193e,#003b68,#0075ad,#179ccf);
+		background: -webkit-linear-gradient(to right bottom,#01193e,#003b68,#0075ad,#179ccf);
+		background: -moz-linear-gradient(to right bottom,#01193e,#003b68,#0075ad,#179ccf);
+		.row {
+			position: relative;
+		}
+		#project-list {
+			width: 400px;
+			float: right;
+			img {
+				width: 150px;
+				margin: 15px;
+				&:nth-of-type(1),
+				&:nth-of-type(2){
+					margin-top: 0px;
+				}
+				&:nth-of-type(3),
+				&:nth-of-type(4){
+					margin-bottom: 0px;
+				}		
+			}
+		}
+		#content-area {
+			float: left;
+			width: 400px;
+			text-align: left;		
+			h1 {
+				padding-top: 0px;
+				margin-bottom: 45px;
+				margin-top: 0px;
+				color: #fff;			
+			}
+			.desc {
+				width: 100%;
+				text-align: left;
+				margin: 0;
+				color: #fff;
+				line-height: 25px;			
+			}
+			.button-clear {
+				color: #fff;
+				padding: 20px;
+				border-radius: 40px;
+				border: 2px solid rgba(255,255,255,0.17);
+				width: 200px;
+				text-align: center;
+				margin-top: 60px;
+				margin-left: 0px;
+				margin-bottom: 0px;
+				margin-right: auto;
+				font-size: 17px;
+				cursor: pointer;
+				transition: all .2s linear;
+				-webkit-transition: all .2s linear;
+				-moz-transition: all .2s linear;
+				&:hover {
+					border: 2px solid #FFF;
+				}			
+			}
+		}
+	}
+	#current {
+		padding-bottom: 75px;
+		h2 {
+			font-size: 40px;
+		}
+		.project {
+			float: left;
+			width: 33.3333%;
+			margin: 30px auto;
+			.project-container {
+				width: 250px;
+				margin: 0 auto;
+			}		
+		}		
+	}
+
+	/********************** ABOUT PAGE *************************
+	************************************************************/
+
+	#about {
+		padding-bottom: 50px;
+		border-bottom: 1px solid #e2e2e2;
+		background-image: linear-gradient(to right bottom, #35115a 20%, #84355a 45%, #d25959 62%, #867e53 83%, #f9a24d 100%);
+		background-image: -webkit-linear-gradient(to right bottom, #35115a 20%, #84355a 45%, #d25959 62%, #867e53 83%, #f9a24d 100%);
+		background-image: -moz-linear-gradient(to right bottom, #35115a 20%, #84355a 45%, #d25959 62%, #867e53 83%, #f9a24d 100%);
+		padding-top: 75px;
+		.row {
+			max-width: 1000px;
+			margin: 0 auto;
+			&:nth-of-type(1){
+				margin-top: 50px;
+				padding-bottom: 20px;
+			}
+		}
+		h1 {
+			margin: 20px auto 30px auto;
+			text-align: left;
+			width: 300px;
+			color: #fff;		
+		}
+		.text-area {
+			float: left;
+			p {
+				color: #fff;
+				&:nth-of-type(1){
+					font-size: 1.3em;
+					width: 300px;
+					margin: 0 auto 30px auto;
+					text-align: left;
+					line-height: 30px;			
+				}
+				&:nth-of-type(2){
+					text-align: left;
+					width: 300px;
+					margin: 0 auto 10px auto;
+					line-height: 30px;			
+				}
+			}
+		}
+		.photo80 {
+			float: right;
+			margin: 0 auto;
+			width: 300px;
+			text-align: center;
+			padding-top: 10px;
+			position: relative;		
+			img {
+				width: 300px;
+				border-radius: 6px;
+				&.palms {
+					position: absolute;
+					width: 120px;
+					top: 150px;
+					left: 0px;
+				}
+				&.palms2 {
+					left: 178px;
+				}
+			}
+		}
+		.photo-row {
+			width: 100%;
+			margin: 80px auto 0 auto;
+			ul {
+				text-align: center;
+				li {
+					display: inline-block;
+					padding: 6px;
+					text-align: center;
+					box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+					background-color: #e2e2e2;
+					border-radius: 5px;
+					margin: 5px;
+					img {
+						width: 120px;
+						height: 120px;
+						border-radius: 5px;					
+					}				
+				}
+			}		
+		}
+	}
+
+	#skills {
+		min-height: 400px;
+		padding: 130px 0px;
+		box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.1);
+		background-color: rgba(0,0,0,0.02);
+		.row {
+			position: relative;
+			top: 0px;
+			max-width: 1040px;
+			width: 90%;
+			margin: 0 auto;			
+		}
+		.skill-text {
+			&:nth-of-type(1){
+				float: left;
+			}
+			&:nth-of-type(2){
+				float: right;
+			}
+			ul {
+				text-align: center;
+				li {
+					display: block;
+					margin: 0 auto;
+					text-align: center;
+					font-size: 1.2em;
+					padding: 10px 0px;
+					&:nth-of-type(4){
+						margin-bottom: 25px;				
+					}				
+				}
+			}
+		}
+		.large-icon {
+			text-align: center;
+			width: 400px;
+			margin: 0 auto;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	#fun-facts {
+		min-height: 400px;
+		box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.1);
+		padding: 130px 0px;
+	}
+	#fun-facts .row {
+		width: 90%;
+		max-width: 1040px;
+		margin: 0 auto;
+	}
+	#fun-facts .text-area {
+		float: left;
+		margin-left: 100px;
+
+	}
+	#fun-facts .large-icon {
+		float: right;
+		padding-top: 30px;
+	}
+	#fun-facts h3 {
+		margin-bottom: 40px;
+	}
+	#fun-facts ul li {
+		display: block;
+		margin: 0 auto;
+		font-size: 1.2em;
+		padding: 10px 0px;
+		text-align: center;
+
+	}
+
+
+	/********************** CONTACT PAGE *************************
+	************************************************************/
+
+	#form-area {
+		padding-bottom: 80px;
+		padding-top: 140px;
+		background: linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
+		background: -moz-linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
+		background: -webkit-linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);	
+	}
+	#form-holder {
+		width: 100%;
+		margin: 0 auto;
+		.text-area {
+			float: left;
+			width: 380px;	
+		}
+		form {
+			float: right;
+			width: 300px;
+			padding-top: 5px;			
+		}
+		h1 {
+			margin-top: 0px;
+			text-align: left;
+			color: #fff;			
+		}
+		p {
+			text-align: left;
+			color: #fff;	
+		}
+		.icons {
+			width: 400px;
+			margin: 0 auto;
+			text-align: left;			
+			li {
+				display: inline-block;
+				margin-top: 20px;
+				margin-right: 20px;		
+			}
+			img {
+				width: 70px;
+			}
+		}
+		#input {
+			button {
+				display: block;
+				margin: 50px auto 0 auto;
+				padding: 20px 50px;
+				background-color: #F32853;
+				font-size: 1.4em;
+				color: #fff;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				border: none;				
+				&:hover {
+					background-color: #f43d64;
+				}
+			}
+		}
+	}
+	#freelance-work {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		h2,h3,p {
+			text-align: center;
+		}
+		h2 {
+			font-size: 40px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		h3 {
+			padding-top: 70px;
+			margin: 15px 0;
+			font-size: 20px;
+		}
+		.rounded-image-holder {
+			text-align: center;
+			width: 100%;	
+		}
+		.rounded-image {
+			background: url('/images/alex-looking-homepage.jpg');
+			background-size: cover;
+			background-color: rgba(0,0,0,0.2);
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+			border-radius: 50%;
+			border: 3px solid #f2f2f2;	
+		}	
+		.image-row {
+			text-align: center;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			img {
+				width: 80px;
+				display: inline-block;
+				margin: 0 20px;
+			}
+		}	
+	}
+}
+/************************* IPAD FIXES ******************************/
+
+@media screen and (min-width: 700px) and (max-width: 872px) {
+	/************************* HOMEPAGE ******************************
+	********************************************************************/
+
+	#one {
+		.header {
+			float: none;
+			width: 100%;
+			margin: 0px;
+			text-align: center;
+		}
+		.header-text {
+			float: none;
+			width: 100%;
+			margin: 0px;	
+		}
+	} 	
+
+	/************************* PROJECT PAGE ******************************
+	********************************************************************/
+
+	#current-projects {
+		padding-bottom: 60px;
+	}
+	#content-area {
+		float: none;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	#content-area .desc {
+		text-align: center;
+	}
+	#content-area .button-clear {
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+	#project-list {
+		float: none;
+	}
+	#project-list img {
+		width: 120px;
+		height: 120px;
+	}
+	.project {
+		float: left;
+		width: 33.3333%;
+		margin: 0 auto;
+	}
+	.project-container {
+		width: 220px;
+	}
+	#projects-done .project-container p {
+		font-size: 15px;
+		width: 100%;
+	}
+	.project-container img {
+		width: 150px;
+	}
+
+	/************************* ABOUT PAGE ******************************
+	********************************************************************/
+
+
+	#about .photo80 {
+		width: 250px;
+	}
+
+	.photo80 img {
+		width: 250px;
+	}
+
+	img.palms {
+		top: 147px;
+		width: 80px;
+	}
+
+	img.palms2 {
+
+
+	}
+
+
+	#fun-facts .text-area {
+		margin-left: 0px;
+
+
+	}
+
+	#fun-facts .large-icon {
+		width: 350px;
+
+	}
+
+	/************************* CONTACT PAGE ******************************
+	********************************************************************/
+
+	#form-area {
+		padding-bottom: 140px;
+		padding-top: 140px;
+		background-color: linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
+		background-color: -moz-linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
+		background-color: -webkit-linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
+	}
+	#form-holder {
+		width: 100%;
+		margin: 0 auto;
+		.text-area {
+			float: left;
+			width: 40%;
+			margin-left: 0px;
+		}
+		form {
+			float: right;
+			width: 300px;
+		}
+		h1 {
+			margin-top: 0px;
+			text-align: left;
+		}
+		p {
+			text-align: left;
+		}
+		.icons {
+			width: 100%;
+			margin: 0 auto;
+			text-align: left;
+			li {
+				display: inline-block;
+				margin-top: 20px;
+				&:nth-of-type(odd){
+					margin-right: 0px;
+					margin-left: 0px;
+				}
+			}
+			img {
+				width: 60px;
+			}
+		}
+		#input {
+			button {
+				display: block;
+				margin: 50px auto 0 auto;
+				padding: 20px 50px;
+				background-color: #F32853;
+				font-size: 1.4em;
+				color: #fff;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				transition: all .1s linear;
+				-webkit-transition: all .1s linear;
+				-moz-transition: all .1s linear;				
+				&:hover {
+					background-color: #f43d64;
+				}
+			}
+		}
+	}
+}
+/************************** LARGE DESKTOP FIXES *************************/
+
+@media screen and (min-width: 1000px) {
+	.desktop-nav .container {
+		position: relative;
+
+	}
+	.nav-home-link {
+		margin-left: 0px;
+
+	}
+	/************************* HOMEPAGE ******************************
+	********************************************************************/
+
+
+	/************************* ABOUT PAGE ******************************
+	********************************************************************/
+
+
+	#about .photo80 {
+		width: 370px;
+		position: relative;
+		top: -40px;
+	}
+	#about .photo80 img:nth-of-type(1){
+		width: 370px;
+	}
+	#about .palms {
+		top: 181px;
+	}
+	img.palms {
+		width: 150px;
+	}
+	img.palms2 {
+		left: 218px;
+	}
+	#about .photo-row {
+		margin-top: 10px;
+	}
+	.large-icon img {
+		width: 340px;
+	}
+	.skill-text {
+		margin-top: 30px;
+	}
+	#fun-facts .text-area {
+		margin-top: 30px;
+
+	}
+	/************************* CONTACT PAGE ******************************
+	********************************************************************/
+	#form-holder {
+		form {
+			width: 400px;
+		}
+		.text-area {
+			margin-left: 0px;
+		}
+	} 
+	/************************* CONTACT PAGE ******************************
+	********************************************************************/
+
+	.project-container {
+		width: 280px;
+	}
+}
+@media screen and (min-height: 800px){
+	footer.keep-bottom {
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+	}
+}

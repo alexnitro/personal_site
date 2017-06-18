@@ -24,8 +24,6 @@ $(".white-x").click(function(){
 });
 
 
-
-
 //Change the main content on the homepage to slowly load
 
 //Add Animation Function
@@ -41,45 +39,21 @@ var skillAppear = function(){
 	$('#header-skills').css({'opacity':'1'});
 }
 
-
-
-
 setTimeout(animateComplete, 400) ;
 setTimeout(addOpacity, 450);
 
-var headerSkills = $('#header-skills li');
+setTimeout(function(){
+	$('#header-skills li').css('opacity',1);
+}, 1000)
 
-function skillsAppear(i){
-	setTimeout(function(){
-		headerSkills.eq(i).css({'opacity':'1'})
-	}, 1000)
-}
 
-for(var i = 0; i < headerSkills.length; i++){
-	skillsAppear(i);
-
-}
-
-sessionStorage.setItem('visit', 'topload');
-
-//This loads other main body elements on the page once users have reached a particular part during their scroll
-$(window).scroll(function(){
-	if($(window).scrollTop() > ($("#three").offset().top - 250)){
-		$("#three").css({"opacity": "1"});
-		$("#marketing-skills .feature-col").addClass('animate-complete');
-	}
-
-});
-
-$('.skill-type').click(function(){
-	
+$('.skill-type').click(function(){	
 	if($(this).hasClass('active')){
 		return false;
 	} else {
 		$(this).siblings().removeClass('active')
 		$(this).addClass('active')
 	}
-
 	if($('.skill-type').eq(1).hasClass('active')){		
 		$('#marketing-skills').children().removeClass('animate-complete');
 		$('#marketing-skills').removeClass('view',function(){
@@ -87,10 +61,7 @@ $('.skill-type').click(function(){
 				$(this).children().addClass('animate-complete');
 				next();
 			});
-
 		});
-
-
 	} else {
 		$('#dev-skills').children().removeClass('animate-complete');
 		$('#dev-skills').removeClass('view', function(){

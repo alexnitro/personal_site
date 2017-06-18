@@ -3,16 +3,10 @@ function preventSubmit(evt){
 	evt.preventDefault();
 
 }
-
-
 (function(){
 	document.getElementById('form-button').addEventListener('click', preventSubmit, false);
 	console.log("ADDED");
-
 })();
-
-
-
 function submitForm(){
 	var firstName = document.getElementById('firstNameInput').value;
 	var lastName = document.getElementById('lastNameInput').value;
@@ -22,7 +16,6 @@ function submitForm(){
 	var formGood = false;
 	fieldArray.push(firstName, lastName, email, help);
 	console.log(fieldArray);
-
 	for(var i = 0; i < fieldArray.length; i++){
 		if(fieldArray[i] === ""){
 			alert("Not all forms filled in");
@@ -31,13 +24,9 @@ function submitForm(){
 			continue;
 		}
 	}
-
 	formGood = true;
-
 	if(formGood){
 		console.log("GOOD SUBMIT");
-
 	}
-
 	return false;
 };

@@ -1,5 +1,14 @@
 extends layout.pug
 
+block css
+  link(rel='stylesheet' type='text/css' media='screen' href='/stylesheets/projects/form/style.css')
+  link(rel='stylesheet' type='text/css' media='screen' href='/stylesheets/projects/form/form.css')
+
+block javaScript
+  script(src='/javascripts/projects/form/select.js')
+  script(src='/javascripts/projects/form/jquery.creditCardValidator.js')
+  script(src='/javascripts/projects/form/form.js')
+
 block content
   .container
     header
