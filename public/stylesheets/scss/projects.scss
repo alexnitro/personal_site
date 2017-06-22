@@ -1,0 +1,221 @@
+/********************** PROJECT PAGE *************************
+************************************************************/
+
+#current-projects {
+	padding-top: 75px;
+	padding-bottom: 100px;
+	padding-left: 0px;
+	padding-right: 0px;
+	background: linear-gradient(to right bottom,#01193e,#003b68,#0075ad,#179ccf);
+	background: -webkit-linear-gradient(to right bottom,#01193e,#003b68,#0075ad,#179ccf);
+	background: -moz-linear-gradient(to right bottom,#01193e,#003b68,#0075ad,#179ccf);
+	.row {
+		position: relative;
+	}
+	#content-area {
+		color: #fff;
+		text-align: center;
+		h1,.desc {
+			color: #FFF;
+		}
+		.desc {
+			width: 80%;
+			text-align: center;
+			margin: 0 auto;
+		}
+		.button-clear {
+			color: #fff;
+			padding: 20px;
+			border-radius: 40px;
+			border: 2px solid rgba(255,255,255,0.17);
+			width: 200px;
+			text-align: center;
+			margin: 50px auto;
+			font-size: 17px;
+			transition: all .2s linear;
+			-webkit-transition: all .2s linear;
+			-moz-transition: all .2s linear;
+		}		
+	}
+	#project-list {
+		margin: 0 auto;
+		text-align: center;
+		float: none;	
+		img {
+			width: 60px;
+			margin: 0px 5px;			
+		}	
+	}
+}
+#current {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	h2 {
+		margin-top: 0px;
+		margin-bottom: 40px;
+	}
+	.project-status {
+		text-align: center;
+		span {
+			padding: 10px;
+			cursor: pointer;
+			font-weight: bold;
+			&.active {
+				font-weight: bold;
+			}			
+		}
+	}
+	#projects-done {
+		margin-top: 10px;	
+	}
+	.project { 
+		text-align: center;
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-bottom: 30px;
+		.project-container {
+			background-color: #f2f2f2;
+			padding: 20px;
+			border-radius: 15px;
+			width: 300px;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;	
+			p {
+				margin-bottom: 20px;
+				font-size: 20px;				
+			}
+			img {
+				width: 200px;
+			}
+			svg {
+				width: 195px;
+			}			
+		}
+	}
+}
+@media screen and (min-width: 700px){
+#current-projects {
+		padding-top: 140px;
+		padding-bottom: 100px;
+		padding-left: 0px;
+		padding-right: 0px;
+		background: linear-gradient(to right bottom,#01193e,#003b68,#0075ad,#179ccf);
+		background: -webkit-linear-gradient(to right bottom,#01193e,#003b68,#0075ad,#179ccf);
+		background: -moz-linear-gradient(to right bottom,#01193e,#003b68,#0075ad,#179ccf);
+		.row {
+			position: relative;
+		}
+		#project-list {
+			width: 400px;
+			float: right;
+			img {
+				width: 150px;
+				margin: 15px;
+				&:nth-of-type(1),
+				&:nth-of-type(2){
+					margin-top: 0px;
+				}
+				&:nth-of-type(3),
+				&:nth-of-type(4){
+					margin-bottom: 0px;
+				}		
+			}
+		}
+		#content-area {
+			float: left;
+			width: 400px;
+			text-align: left;		
+			h1 {
+				padding-top: 0px;
+				margin-bottom: 45px;
+				margin-top: 0px;
+				color: #fff;			
+			}
+			.desc {
+				width: 100%;
+				text-align: left;
+				margin: 0;
+				color: #fff;
+				line-height: 25px;			
+			}
+			.button-clear {
+				color: #fff;
+				padding: 20px;
+				border-radius: 40px;
+				border: 2px solid rgba(255,255,255,0.17);
+				width: 200px;
+				text-align: center;
+				margin-top: 60px;
+				margin-left: 0px;
+				margin-bottom: 0px;
+				margin-right: auto;
+				font-size: 17px;
+				cursor: pointer;
+				transition: all .2s linear;
+				-webkit-transition: all .2s linear;
+				-moz-transition: all .2s linear;
+				&:hover {
+					border: 2px solid #FFF;
+				}			
+			}
+		}
+	}
+	#current {
+		padding-bottom: 75px;
+		h2 {
+			font-size: 40px;
+		}
+		.project {
+			float: left;
+			width: 33.3333%;
+			margin: 30px auto;
+			.project-container {
+				width: 250px;
+				margin: 0 auto;
+			}		
+		}		
+	}	
+}
+@media screen and (min-width: 700px) and (max-width: 872px) {
+	#current-projects {
+		padding-bottom: 60px;
+	}
+	#content-area {
+		float: none;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	#content-area .desc {
+		text-align: center;
+	}
+	#content-area .button-clear {
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+	#project-list {
+		float: none;
+	}
+	#project-list img {
+		width: 120px;
+		height: 120px;
+	}
+	.project {
+		float: left;
+		width: 33.3333%;
+		margin: 0 auto;
+	}
+	.project-container {
+		width: 220px;
+	}
+	#projects-done .project-container p {
+		font-size: 15px;
+		width: 100%;
+	}
+	.project-container img {
+		width: 150px;
+	}
+
+}

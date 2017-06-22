@@ -39,21 +39,32 @@ var skillAppear = function(){
 	$('#header-skills').css({'opacity':'1'});
 }
 
+
 setTimeout(animateComplete, 400) ;
 setTimeout(addOpacity, 450);
 
-setTimeout(function(){
-	$('#header-skills li').css('opacity',1);
-}, 1000)
+var headerSkills = $('#header-skills li');
 
+function skillsAppear(i){
+	setTimeout(function(){
+		headerSkills.eq(i).css({'opacity':'1'})
+	}, 1000)
+}
 
-$('.skill-type').click(function(){	
+for(var i = 0; i < headerSkills.length; i++){
+	skillsAppear(i);
+}
+
+//This loads other main body elements on the page once users have reached a particular part during their scroll
+$('.skill-type').click(function(){
+	
 	if($(this).hasClass('active')){
 		return false;
 	} else {
 		$(this).siblings().removeClass('active')
 		$(this).addClass('active')
 	}
+
 	if($('.skill-type').eq(1).hasClass('active')){		
 		$('#marketing-skills').children().removeClass('animate-complete');
 		$('#marketing-skills').removeClass('view',function(){
@@ -61,7 +72,10 @@ $('.skill-type').click(function(){
 				$(this).children().addClass('animate-complete');
 				next();
 			});
+
 		});
+
+
 	} else {
 		$('#dev-skills').children().removeClass('animate-complete');
 		$('#dev-skills').removeClass('view', function(){
