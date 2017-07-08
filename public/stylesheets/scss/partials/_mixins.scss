@@ -1,0 +1,7 @@
+
+@mixin transitionBuilder($transEl, $timing, $moveType){
+	transition: $transEl $timing $moveType;
+	-webkit-transition: $transEl $timing $moveType;
+	-moz-transition: $transEl $timing $moveType;
+	-o-transition: $transEl $timing $moveType; 
+}

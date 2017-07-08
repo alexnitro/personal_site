@@ -1,0 +1,229 @@
+@import '../global';
+
+/********************** CONTACT *************************
+*****************************************************/
+#form-area {
+	padding-top: 75px;
+	padding-bottom: 50px;
+	background: linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
+	background: -webkit-linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
+	background: -moz-linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
+	#form-folder {
+		width: 300px;
+		margin: 0 auto;		
+		h1 {
+			margin-bottom: 20px;
+			text-align: left;			
+		}
+		p {
+			text-align: left;
+			color: #fff;
+			margin-bottom: 40px;			
+		}
+		.icons {
+			width: 300px;
+			margin: 0 auto 40px auto;
+			text-align: center;
+			li {
+				display: inline-block;
+				margin-right: 6px;
+				margin-left: 6px;				
+			}
+			img {
+				width: 60px;
+			}			
+		}
+		#input {
+			button {
+				display: block;
+				margin: 50px auto 0 auto;
+				padding: 20px 50px;
+				background-color: #F32853;
+				font-size: 1.4em;
+				color: #fff;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				border: none;
+				transition: all .1s linear;
+				-webkit-transition: all .1s linear;
+				-moz-transition: all .1s linear;
+				&:hover {
+					background-color: #f43d64;				
+				}				
+			}
+		}
+	}
+}	
+@media screen and (min-width: 700px){
+	#form-area {
+			padding-bottom: 80px;
+			padding-top: 140px;	
+	}
+	#form-holder {
+		width: 100%;
+		.text-area {
+			float: left;
+			width: 380px;	
+		}
+		form {
+			float: right;
+			width: 300px;
+			padding-top: 5px;			
+		}
+		h1 {
+			margin-top: 0px;
+			text-align: left;
+			color: #fff;			
+		}
+		p {
+			text-align: left;
+			color: #fff;	
+		}
+		.icons {
+			width: 400px;
+			margin: 0 auto;
+			text-align: left;			
+			li {
+				display: inline-block;
+				margin-top: 20px;
+				margin-right: 20px;		
+			}
+			img {
+				width: 70px;
+			}
+		}
+		#input {
+			button {
+				display: block;
+				margin: 50px auto 0 auto;
+				padding: 20px 50px;
+				background-color: #F32853;
+				font-size: 1.4em;
+				color: #fff;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				border: none;				
+				&:hover {
+					background-color: #f43d64;
+				}
+			}
+		}
+	}
+	#freelance-work {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		h2,h3,p {
+			text-align: center;
+		}
+		h2 {
+			font-size: 40px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		h3 {
+			padding-top: 70px;
+			margin: 15px 0;
+			font-size: 20px;
+		}
+		.rounded-image-holder {
+			text-align: center;
+			width: 100%;	
+		}
+		.rounded-image {
+			background: url('/images/alex-looking-homepage.jpg');
+			background-size: cover;
+			background-color: rgba(0,0,0,0.2);
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+			border-radius: 50%;
+			border: 3px solid #f2f2f2;	
+		}	
+		.image-row {
+			text-align: center;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			img {
+				width: 80px;
+				display: inline-block;
+				margin: 0 20px;
+			}
+		}	
+	}	
+}
+@media screen and (min-width: 700px) and (max-width: 872px){
+	#form-area {
+			padding-bottom: 140px;
+			padding-top: 140px;
+			background-color: linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
+			background-color: -moz-linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
+			background-color: -webkit-linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
+	}
+	#form-holder {
+		width: 100%;
+		margin: 0 auto;
+		.text-area {
+			float: left;
+			width: 40%;
+			margin-left: 0px;
+		}
+		form {
+			float: right;
+			width: 300px;
+		}
+		h1 {
+			margin-top: 0px;
+			text-align: left;
+		}
+		p {
+			text-align: left;
+		}
+		.icons {
+			width: 100%;
+			margin: 0 auto;
+			text-align: left;
+			li {
+				display: inline-block;
+				margin-top: 20px;
+				&:nth-of-type(odd){
+					margin-right: 0px;
+					margin-left: 0px;
+				}
+			}
+			img {
+				width: 60px;
+			}
+		}
+		#input {
+			button {
+				display: block;
+				margin: 50px auto 0 auto;
+				padding: 20px 50px;
+				background-color: #F32853;
+				font-size: 1.4em;
+				color: #fff;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				transition: all .1s linear;
+				-webkit-transition: all .1s linear;
+				-moz-transition: all .1s linear;				
+				&:hover {
+					background-color: #f43d64;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 1000px){
+	#form-holder {
+		form {
+			width: 400px;
+		}
+		.text-area {
+			margin-left: 0px;
+		}
+	} 		
+}

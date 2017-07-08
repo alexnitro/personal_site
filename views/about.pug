@@ -1,59 +1,67 @@
 extends layout.pug
 
 block css
-	link(rel="stylesheet", type="text/css" href="/stylesheets/css/about-min.css")
+	link(rel="stylesheet", type="text/css" href="/stylesheets/scss/css/about-min.css")
+block javaScript
+	script.
+		globalApp.elementAnimateComplete('#about .animate-left,#about .animate-right');
+		globalApp.aboutComplete();
 
 block content
 	#about.pad-top-100
 		.container
 			.row
-				.text-area.animate-left
-					h1.center about me
-					p.center Marketing and Front End Developer based in Melbourne, Australia
-					p.center I enjoy blending marketing and web development to improve experiences and efficient. What I'm not coding or marketing, you'll find me at the local pub watching soccer or playing tennis.
-				.photo80.animate-right
-					img(src="/images/computer.png")
-					img(src="/images/summer.png").palms
-					img(src="/images/summer.png").palms.palms2
+				.col-md-12
+					.col-md-5.text-area.animate-left
+						h1.center about me
+						p.center Marketing and Front End Developer based in Melbourne, Australia
+						p.center I enjoy blending marketing and web development to improve experiences and efficient. What I'm not coding or marketing, you'll find me at the local pub watching soccer or playing tennis.
+					.col-md-4.photo80.animate-right
+						img(src="/images/computer.png")
+						img(src="/images/summer.png").palms
+						img(src="/images/summer.png").palms.palms2
 			.row
-				.photo-row
-					ul
-						li
-							img(src="/images/melbourne/melbourne-rooftop.jpg")
-						li
-							img(src="/images/likers.jpg")
-						li
-							img(src="/images/propaganda.jpg")
-						li
-							img(src="/images/alex-teeth.jpg")
+				.col-md-12
+					.photo-row
+						ul
+							li
+								img(src="/images/melbourne/melbourne-rooftop.jpg")
+							li
+								img(src="/images/likers.jpg")
+							li
+								img(src="/images/propaganda.jpg")
+							li
+								img(src="/images/alex-teeth.jpg")
 	#skills
 		.container
 			.row
-				.skill-text.animate-left
-					h3.center Marketer
-					ul
-						li SEO
-						li Pay Per Click
-						li Web Analytics
-						li A/B Testing
-				.skill-text.animate-right
-					h3.center Developer
-					ul
-						li HTML
-						li CSS3
-						li jQuery
-						li JavaScript
-				.large-icon
-					img(src="/images/laptop.png")
+				.col-md-12
+					.skill-text.animate-left
+						h3.center Marketer
+						ul
+							li SEO
+							li Pay Per Click
+							li Web Analytics
+							li A/B Testing
+					.skill-text.animate-right
+						h3.center Developer
+						ul
+							li HTML
+							li CSS3
+							li jQuery
+							li JavaScript
+					.large-icon
+						img(src="/images/laptop.png")
 	#fun-facts
 		.container
 			.row
-				.text-area.animate-left
-					h3.center Fun Facts
-					ul
-						li I worship Liverpool FC
-						li I can still break 80 at golf
-						li Coffee is an addition and it's got me good
-						li I'm from LA but Melbourne is my true home.
-				.large-icon.animate-right
-					img(src="/images/can.png")
+				.col-md-12
+					.text-area.animate-left.animate-target
+						h3.center Fun Facts
+						ul
+							li I worship Liverpool FC
+							li I can still break 80 at golf
+							li Coffee is an addition and it's got me good
+							li I'm from LA but Melbourne is my true home.
+					.large-icon.animate-right.animate-target
+						img(src="/images/can.png")

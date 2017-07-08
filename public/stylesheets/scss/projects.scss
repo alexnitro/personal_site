@@ -55,6 +55,7 @@
 		margin-bottom: 40px;
 	}
 	.project-status {
+		margin-bottom: 20px;
 		text-align: center;
 		span {
 			padding: 10px;
@@ -65,8 +66,19 @@
 			}			
 		}
 	}
-	#projects-done {
-		margin-top: 10px;	
+	.project-holder {
+		min-height: 1600px;
+		.project-done {
+			position: absolute;
+			opacity: 0;
+			width: 100%;
+			transition: .3s opacity ease-in-out;
+			-webkit-transition: .3s opacity ease-in-out;
+			-moz-transition: .3s opacity ease-in-out;
+			&.active {
+				opacity: 1;
+			}
+		}
 	}
 	.project { 
 		text-align: center;
@@ -94,6 +106,7 @@
 		}
 	}
 }
+
 @media screen and (min-width: 700px){
 #current-projects {
 		padding-top: 140px;
@@ -109,6 +122,8 @@
 		#project-list {
 			width: 400px;
 			float: right;
+			margin-left: auto;
+			margin-right: 0px;
 			img {
 				width: 150px;
 				margin: 15px;
@@ -166,10 +181,11 @@
 		h2 {
 			font-size: 40px;
 		}
+		.project-holder {
+			min-height: 700px;
+		}
 		.project {
-			float: left;
-			width: 33.3333%;
-			margin: 30px auto;
+			margin: 40px auto;
 			.project-container {
 				width: 250px;
 				margin: 0 auto;

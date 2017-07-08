@@ -1,0 +1,24 @@
+//==============================================
+//	FUNCTIONS
+//==============================================
+
+$max-width: 1000px;
+
+@function divide($a, $b){
+	@return ($a / $b);
+
+}
+@function px-to-pc($target, $context: $max-width){
+	@return ($target / $context) * 100% ;
+}
+
+.test {
+	width: px-to-pc(400px)
+
+}
+
+@function per-line($items){
+	$g-pct: px-to-pc($gutter) * 2;
+	$g-total: $g-pct * $items;
+	@return (100% / $items) - $g-total;
+}

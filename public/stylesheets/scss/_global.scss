@@ -1,0 +1,17 @@
+//SCSS HELPERS AND FUNCTIONS
+@import 'partials/variables';
+@import 'partials/mixins';
+
+//BASE IMPORT OF GENERAL
+@import 'partials/typography';
+@import 'partials/breakpoints/base';
+
+@media screen and (min-width: 700px){
+	@import 'partials/breakpoints/700up';	
+}
+@media screen and (min-width: 1000px){
+	@import 'partials/breakpoints/1000up';
+}
+@media screen and (min-height: 800px){
+	@import 'partials/breakpoints/800hup'; 
+}

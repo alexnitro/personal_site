@@ -2,9 +2,13 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	font-family: "Raleway", sans-serif, helvetica;
 	color: #666;
+}
+section {
+	display: block;	
 }
 .clear:after {
 	display: table;

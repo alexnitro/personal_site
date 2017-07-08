@@ -1,11 +1,8 @@
-
+"use-strict";
 var movieFinderApp = (function(){
 
 	/******************************** GLOBAL VAR *******************************
 	****************************************************************************/
-
-	"use-strict";
-
 	//Movie section
 	var $movies = $('#movies');
 	//Search inputs
@@ -16,7 +13,7 @@ var movieFinderApp = (function(){
 	var imdbArray = [];
 	var counterArray;
 	//Host URL sent during the AJAX request
-	var url = "http://www.omdbapi.com/?";
+	var url = "http://www.omdbapi.com/?i=tt3896198&apikey=9bffe1d3";
 	//Keeps track of the users pagination scrolling to determine what number index is being shown in the first of the number li elements
 	var pagIndex = 1;
 	var $pag = $('#pagination-links');
@@ -95,7 +92,6 @@ var movieFinderApp = (function(){
 		return pagLinks;
 
 	}
-
 	//Actions to run when a user selects the NEXT button arrow in the pagination section
 	function nextButton(){
 		var $numberList = $('.number a');
@@ -103,19 +99,13 @@ var movieFinderApp = (function(){
 		var number;
 
 		//Check to see if the pagination has reached the last allowed page
-		
-		if(pagLength < 6){
-			
+		if(pagLength < 6){			
 			return false;
-
-		} else if(parseInt($('.number').last().children().html()) === pagLength){
-			
+		} else if(parseInt($('.number').last().children().html()) === pagLength){			
 			if(!$('.next').hasClass('disabled')){
 				$('.next').addClass('disabled');
 			}
-
 			return false;
-
 		} else {
 			//Increae the Pagination Numbers by 1
 			for(var i = 0; i < $numberList.length; i++){
@@ -134,7 +124,6 @@ var movieFinderApp = (function(){
 			}	
 		}
 	}
-
 	//Actions to run when a user selects the PREVIOUS button arrow in the pagination section
 	function prevButton(){
 		var $numberList = $('.number a');
@@ -318,7 +307,6 @@ var movieFinderApp = (function(){
 		}
 		return index;
 	}
-
 
 	/******************************** CLICK EVENTS *******************************
 	*****************************************************************************/

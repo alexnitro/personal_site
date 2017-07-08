@@ -1,0 +1,335 @@
+@import '../global';
+
+.col-md-12 {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#about {
+	padding-bottom: 50px;
+	padding-top: 75px;
+	border-bottom: 1px solid #e2e2e2;
+	background-image: linear-gradient(to right bottom, #35115a 20%, #84355a 45%, #d25959 62%, #867e53 83%, #f9a24d 100%);
+	background-image: -webkit-linear-gradient(to right bottom, #35115a 20%, #84355a 45%, #d25959 62%, #867e53 83%, #f9a24d 100%);
+	background-image: -moz-linear-gradient(to right bottom, #35115a 20%, #84355a 45%, #d25959 62%, #867e53 83%, #f9a24d 100%);
+	h1 {
+		margin: 20px auto 30px auto;
+		text-align: left;
+	}
+	.text-area {
+		p {
+			color: #FFF;
+			&:nth-of-type(1){
+				font-size: 1.3em;
+				margin: 0 auto 30px auto;
+				text-align: left;
+				line-height: 30px;
+			}
+			&:nth-of-type(2){
+				text-align: left;
+				margin: 0 auto 10px auto;
+				line-height: 30px;
+			}
+		}		
+	}
+	.photo80 {
+		margin: 0 auto;
+		width: 300px;
+		text-align: center;
+		padding-top: 10px;
+		position: relative;
+		img {
+			width: 300px;
+			&.palms {
+				position: absolute;
+				width: 120px;
+				top: 150px;
+				left: 0px;
+			}
+			&.palms2 {
+				left: 178px;
+			}			
+		}
+	}
+	.photo-row {
+		width: 300px;
+		margin: 40px auto 0 auto;
+		ul {
+			text-align: center;
+			li {
+				display: inline-block;
+				padding: 6px;
+				text-align: center;
+				box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+				border-radius: 5px;
+				margin: 5px;
+				background-color: #e2e2e2;		
+				img {
+					width: 120px;
+					height: 120px;
+					border-radius: 5px;					
+				}		
+			}
+		}				
+	}		
+}
+#skills {
+	min-height: 600px;
+	padding-top: 40px;
+	box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.02);
+	opacity: 0;
+	transition: opacity .2s linear;
+	-webkit-transition: opacity .2s linear;
+	-moz-transition: opacity .2s linear;
+	.skill-text {
+		ul {
+			text-align: center;
+			li {
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+				font-size: 1.2em;
+				padding: 10px 0px;
+				&:nth-of-type(4){
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+	.large-icon {
+		text-align: center;
+		margin: 30px 0 30px;
+		img {
+			width: 200px;
+		}		
+	}
+}	
+#fun-facts {
+	min-height: 600px;
+	padding-top: 40px;
+	box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.1);
+	opacity: 0;
+	transition: opacity .2s linear;
+	-webkit-transition: opacity .2s linear;
+	-moz-transition: opacity .2s linear;
+	h3 {
+		margin-bottom: 40px;
+	}
+	ul {
+		li {
+			display: block;
+			margin: 0 auto;
+			font-size: 1.2em;
+			padding: 10px 0px;
+			text-align: center;			
+		}
+	}
+}
+@media screen and (min-width: 700px){
+	#about {
+		padding-bottom: 50px;
+		border-bottom: 1px solid #e2e2e2;
+		background-image: linear-gradient(to right bottom, #35115a 20%, #84355a 45%, #d25959 62%, #867e53 83%, #f9a24d 100%);
+		background-image: -webkit-linear-gradient(to right bottom, #35115a 20%, #84355a 45%, #d25959 62%, #867e53 83%, #f9a24d 100%);
+		background-image: -moz-linear-gradient(to right bottom, #35115a 20%, #84355a 45%, #d25959 62%, #867e53 83%, #f9a24d 100%);
+		padding-top: 75px;
+		.row {
+			margin: 0 auto;
+			&:nth-of-type(1){
+				margin-top: 50px;
+				padding-bottom: 20px;
+			}
+		}
+		h1 {
+			margin: 20px auto 30px auto;
+			text-align: left;
+			color: #fff;		
+		}
+		.text-area {
+			float: left;
+			padding-left: 0px;
+			p {
+				color: #fff;
+				&:nth-of-type(1){
+					font-size: 1.3em;
+					margin: 0 auto 30px auto;
+					text-align: left;
+					line-height: 30px;			
+				}
+				&:nth-of-type(2){
+					text-align: left;
+					margin: 0 auto 10px auto;
+					line-height: 30px;			
+				}
+			}
+		}
+		.photo80 {
+			float: right;
+			margin: 0 auto;
+			width: 300px;
+			text-align: center;
+			padding-top: 10px;
+			padding-right: 0px;
+			position: relative;		
+			img {
+				width: 300px;
+				border-radius: 6px;
+				&.palms {
+					position: absolute;
+					width: 120px;
+					top: 210px;
+					left: 15px;
+				}
+				&.palms2 {
+					left: 265px;
+				}
+			}
+		}
+		.photo-row {
+			width: 100%;
+			margin: 80px auto 0 auto;
+			ul {
+				text-align: center;
+				li {
+					display: inline-block;
+					padding: 6px;
+					text-align: center;
+					box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+					background-color: #e2e2e2;
+					border-radius: 5px;
+					margin: 5px;
+					img {
+						width: 120px;
+						height: 120px;
+						border-radius: 5px;					
+					}				
+				}
+			}		
+		}
+	}
+	#skills {
+		min-height: 400px;
+		padding: 130px 0px;
+		box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.1);
+		background-color: rgba(0,0,0,0.02);
+		.row {
+			position: relative;
+			top: 0px;
+			max-width: 1040px;
+			width: 90%;
+			margin: 0 auto;			
+		}
+		.skill-text {
+			&:nth-of-type(1){
+				float: left;
+			}
+			&:nth-of-type(2){
+				float: right;
+			}
+			ul {
+				text-align: center;
+				li {
+					display: block;
+					margin: 0 auto;
+					text-align: center;
+					font-size: 1.2em;
+					padding: 10px 0px;
+					&:nth-of-type(4){
+						margin-bottom: 25px;				
+					}				
+				}
+			}
+		}
+		.large-icon {
+			text-align: center;
+			width: 300px;
+			margin: 0 auto;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	#fun-facts {
+		min-height: 400px;
+		box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.1);
+		padding: 130px 0px;
+		.text-area {
+			float: left;
+			margin-left: 100px;			
+		}
+		.large-icon {
+			float: right;
+			padding-top: 30px;	
+		}
+		h3 {
+			margin-bottom: 40px;
+		}
+		ul {
+			li {
+				display: block;
+				margin: 0 auto;
+				font-size: 1.2em;
+				padding: 10px 0px;
+				text-align: center;				
+			}
+		}
+	}	
+}
+@media screen and (min-width: 700px) and (max-width: 872px) {
+	#about .photo80 {
+		width: 250px;
+		img {
+			width: 250px;
+			&.palms {
+				top: 147px;
+				width: 80px;
+			}
+		}
+	}
+	#fun-facts {
+		.text-area {
+			margin-left: 0px;
+		}
+		.large-icon {
+			width: 350px;
+		}
+	}
+}
+@media screen and (min-width:1000px){
+	#about .photo80 {
+		width: 370px;
+		position: relative;
+		top: -40px;
+	}
+	#about .photo80 img:nth-of-type(1){
+		width: 370px;
+	}
+	#about .palms {
+		top: 181px;
+	}
+	img.palms {
+		width: 150px;
+	}
+	img.palms2 {
+		left: 218px;
+	}
+	#about .photo-row {
+		margin-top: 10px;
+	}
+	#fun-facts {
+		.large-icon {
+			padding-top: 0px;
+			margin-right: 100px;
+			img {
+				width: 300px;
+			}
+		}
+	}
+	.skill-text {
+		margin-top: 30px;
+	}
+	#fun-facts .text-area {
+		margin-top: 30px;
+
+	}	
+}

@@ -1,7 +1,7 @@
 extends layout
 
 block css
-	link(rel="stylesheet", type="text/css" href="/stylesheets/css/homepage-min.css")
+	link(rel="stylesheet", type="text/css" href="/stylesheets/scss/css/homepage-min.css")
 
 block javaScript
 	script(src='/javascripts/homepage.js')
@@ -14,33 +14,36 @@ block content
 				#header-image.center
 					img(src="/images/alex-homepage.jpg")
 				#skill-section.row
-					#header-skills.center
+					#header-skills.col-md-12.center
 						ul
-							li Marketer
+							li.float-left Marketer
 								.skill-logo
 									img(src="/images/diagram.png")
-							li Developer
+							li.float-left Developer
 								.skill-logo
 									img(src="/images/computer.png")
-							li Traveler
+							li.float-left Traveler
 								.skill-logo
 									img(src="/images/mountain.png")
 					.red-button.center(style="display:none")
 						a(href="#") Learn More	          
 	section#one.clear
 		.container
-			.header.center
-				h2 A little something about me
-				.image-holder
-					img(src="/images/alex-teeth.jpg")
-			.header-text.center
-				p Hi there, and thanks again for stopping by. My name is Alex Acker and I'm an experienced growth marketer currently based in Melbourne, Australia. For the longest time my roots have been based in digital performance marketing but have seen grown to include Web Analytics and Site Testing and Planning If you're looking for some work in consulting please contact me via one of my social profiles.
-				br
-				p Today though my focus and personal growth is in Front End Web Development including this site and the projects within it. I'm constantly updating the site with new games and general updates so check in from time to time to see what's new.					
+			.row
+				.col-md-4.col-sm-12.header
+					h2 A little something about me
+					.image-holder
+						img(src="/images/alex-teeth.jpg")
+				.col-md-7.offset-md-1.col-sm-12.header-text.center.pt-4
+					p Hi there, and thanks again for stopping by. My name is Alex Acker and I'm an experienced growth marketer currently based in Melbourne, Australia. For the longest time my roots have been based in digital performance marketing but have seen grown to include Web Analytics and Site Testing and Planning If you're looking for some work in consulting please contact me via one of my social profiles.
+					br
+					p Today though my focus and personal growth is in Front End Web Development including this site and the projects within it. I'm constantly updating the site with new games and general updates so check in from time to time to see what's new.					
 	section#four.wrapper
 		.background-overlay
 			.container.center
-				h4 Interested in Connecting?
-				p.grey-out Become a connection or send me a note
-				#get-in-touch-section.bottom-button.photo-buttons.center
-					a(href="/contact" class="") GET IN TOUCH				
+				.row
+					.col-md-12
+						h4 Interested in Connecting?
+						p.grey-out Become a connection or send me a note
+						#get-in-touch-section.bottom-button.photo-buttons.center
+							a(href="/contact" class="") GET IN TOUCH				

@@ -1,3 +1,7 @@
+.col-md-12 {
+	padding-left: 0px;
+	padding-right: 0px;
+}
 #about {
 	padding-bottom: 50px;
 	padding-top: 75px;
@@ -8,21 +12,18 @@
 	h1 {
 		margin: 20px auto 30px auto;
 		text-align: left;
-		width: 300px;		
 	}
 	.text-area {
 		p {
 			color: #FFF;
 			&:nth-of-type(1){
 				font-size: 1.3em;
-				width: 300px;
 				margin: 0 auto 30px auto;
 				text-align: left;
 				line-height: 30px;
 			}
 			&:nth-of-type(2){
 				text-align: left;
-				width: 300px;
 				margin: 0 auto 10px auto;
 				line-height: 30px;
 			}
@@ -123,7 +124,7 @@
 	}
 }
 @media screen and (min-width: 700px){
-#about {
+	#about {
 		padding-bottom: 50px;
 		border-bottom: 1px solid #e2e2e2;
 		background-image: linear-gradient(to right bottom, #35115a 20%, #84355a 45%, #d25959 62%, #867e53 83%, #f9a24d 100%);
@@ -131,7 +132,6 @@
 		background-image: -moz-linear-gradient(to right bottom, #35115a 20%, #84355a 45%, #d25959 62%, #867e53 83%, #f9a24d 100%);
 		padding-top: 75px;
 		.row {
-			max-width: 1000px;
 			margin: 0 auto;
 			&:nth-of-type(1){
 				margin-top: 50px;
@@ -141,23 +141,21 @@
 		h1 {
 			margin: 20px auto 30px auto;
 			text-align: left;
-			width: 300px;
 			color: #fff;		
 		}
 		.text-area {
 			float: left;
+			padding-left: 0px;
 			p {
 				color: #fff;
 				&:nth-of-type(1){
 					font-size: 1.3em;
-					width: 300px;
 					margin: 0 auto 30px auto;
 					text-align: left;
 					line-height: 30px;			
 				}
 				&:nth-of-type(2){
 					text-align: left;
-					width: 300px;
 					margin: 0 auto 10px auto;
 					line-height: 30px;			
 				}
@@ -169,6 +167,7 @@
 			width: 300px;
 			text-align: center;
 			padding-top: 10px;
+			padding-right: 0px;
 			position: relative;		
 			img {
 				width: 300px;
@@ -177,10 +176,10 @@
 					position: absolute;
 					width: 120px;
 					top: 210px;
-					left: 0px;
+					left: 15px;
 				}
 				&.palms2 {
-					left: 240px;
+					left: 265px;
 				}
 			}
 		}
@@ -241,7 +240,7 @@
 		}
 		.large-icon {
 			text-align: center;
-			width: 400px;
+			width: 300px;
 			margin: 0 auto;
 			img {
 				width: 100%;
@@ -252,11 +251,6 @@
 		min-height: 400px;
 		box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.1);
 		padding: 130px 0px;
-		.row {
-			width: 90%;
-			max-width: 1040px;
-			margin: 0 auto;			
-		}
 		.text-area {
 			float: left;
 			margin-left: 100px;			
@@ -320,8 +314,14 @@
 	#about .photo-row {
 		margin-top: 10px;
 	}
-	.large-icon img {
-		width: 340px;
+	#fun-facts {
+		.large-icon {
+			padding-top: 0px;
+			margin-right: 100px;
+			img {
+				width: 300px;
+			}
+		}
 	}
 	.skill-text {
 		margin-top: 30px;
