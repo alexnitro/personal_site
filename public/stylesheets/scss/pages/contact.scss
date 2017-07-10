@@ -8,8 +8,8 @@
 	background: linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
 	background: -webkit-linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
 	background: -moz-linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
-	#form-folder {
-		width: 300px;
+	#form-holder {
+		width: 90%;
 		margin: 0 auto;		
 		h1 {
 			margin-bottom: 20px;
@@ -21,13 +21,13 @@
 			margin-bottom: 40px;			
 		}
 		.icons {
-			width: 300px;
+			width: 90%;
 			margin: 0 auto 40px auto;
 			text-align: center;
 			li {
-				display: inline-block;
-				margin-right: 6px;
-				margin-left: 6px;				
+				float: left;
+				width: 25%;
+				padding: 10px; 				
 			}
 			img {
 				width: 60px;
@@ -55,6 +55,17 @@
 		}
 	}
 }	
+#freelance-work {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+	.image-row {
+		margin-top: 25px;
+		img {
+			width: 15%;
+		}
+	}
+}
 @media screen and (min-width: 700px){
 	#form-area {
 			padding-bottom: 80px;

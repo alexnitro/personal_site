@@ -46,7 +46,7 @@
 				left: 0px;
 			}
 			&.palms2 {
-				left: 178px;
+				left: 210px;
 			}			
 		}
 	}
@@ -70,7 +70,7 @@
 				}		
 			}
 		}				
-	}		
+	}	
 }
 #skills {
 	min-height: 600px;
@@ -97,8 +97,6 @@
 		}
 	}
 	.large-icon {
-		text-align: center;
-		margin: 30px 0 30px;
 		img {
 			width: 200px;
 		}		
@@ -123,6 +121,17 @@
 			padding: 10px 0px;
 			text-align: center;			
 		}
+	}
+	.large-icon {
+		img {
+		}
+	}
+}
+.large-icon {
+	text-align: center;
+	margin: 30px 0 30px;
+	img {
+		width: 250px;
 	}
 }
 @media screen and (min-width: 700px){

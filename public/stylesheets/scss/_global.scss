@@ -3,6 +3,8 @@
 @import 'partials/mixins';
 
 //BASE IMPORT OF GENERAL
+@import 'framework/bootstrap';
+@import 'framework/normalize';
 @import 'partials/typography';
 @import 'partials/breakpoints/base';
 
