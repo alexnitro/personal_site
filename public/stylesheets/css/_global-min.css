@@ -8030,7 +8030,31 @@ footer {
         margin-left: 45px;
         font-size: 1em;
         color: white;
-        padding: 10px 0 10px 0; }
+        padding: 10px 0 10px 0;
+        position: relative; }
+        .nav-links ul li .dropdown {
+          position: absolute;
+          background-color: #000;
+          border-radius: 4px;
+          width: 280px;
+          padding: 10px;
+          left: -100px;
+          top: 50px; }
+          .nav-links ul li .dropdown:after {
+            width: 0;
+            height: 0;
+            content: "";
+            position: absolute;
+            left: 130px;
+            top: -10px;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #000; }
+          .nav-links ul li .dropdown li {
+            width: 100%;
+            margin-left: 0px;
+            padding-left: 10px;
+            padding-top: 10px; }
   .black-nav li a {
     color: #404040 !important; }
   .nav-home-link {

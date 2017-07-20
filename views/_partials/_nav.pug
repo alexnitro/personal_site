@@ -3,9 +3,18 @@ nav.transparent.positioning
         .nav-links.clear(style="display:block")
             .container
                 a(href="/" class="nav-home-link") Alex Acker
-                ul
+                ul.right-nav
                     li
                         a(href="/project") Projects
+                        ul.dropdown
+                            li
+                                a(href='/projects/weather') Weather App
+                            li
+                                a(href='/projects/wikipedia') Wikipedia Viewer
+                            li
+                                a(href='/projects/tic-tac-toe') Tic Tac Toe Game
+                            li
+                                a(href='/projects#current') All Projects
                     li
                         a(href="/about") About
                     li

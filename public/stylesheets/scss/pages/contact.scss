@@ -68,59 +68,58 @@
 }
 @media screen and (min-width: 700px){
 	#form-area {
-			padding-bottom: 80px;
-			padding-top: 140px;	
-	}
-	#form-holder {
-		width: 100%;
-		.text-area {
-			float: left;
-			width: 380px;	
-		}
-		form {
-			float: right;
-			width: 300px;
-			padding-top: 5px;			
-		}
-		h1 {
-			margin-top: 0px;
-			text-align: left;
-			color: #fff;			
-		}
-		p {
-			text-align: left;
-			color: #fff;	
-		}
-		.icons {
-			width: 400px;
-			margin: 0 auto;
-			text-align: left;			
-			li {
-				display: inline-block;
-				margin-top: 20px;
-				margin-right: 20px;		
+		padding-bottom: 80px;
+		padding-top: 140px;	
+		#form-holder {
+			width: 100%;
+			.text-area {
+				float: left;
+				width: 380px;	
 			}
-			img {
-				width: 70px;
+			form {
+				float: right;
+				width: 300px;
+				padding-top: 5px;			
 			}
-		}
-		#input {
-			button {
-				display: block;
-				margin: 50px auto 0 auto;
-				padding: 20px 50px;
-				background-color: #F32853;
-				font-size: 1.4em;
-				color: #fff;
-				text-decoration: none;
-				text-transform: uppercase;
-				font-weight: bold;
-				border: none;				
-				&:hover {
-					background-color: #f43d64;
+			h1 {
+				margin-top: 0px;
+				text-align: left;
+				color: #fff;			
+			}
+			p {
+				text-align: left;
+				color: #fff;	
+			}
+			.icons {
+				width: 400px;
+				margin: 0 auto;
+				text-align: left;			
+				li {
+					display: inline-block;
+					margin-top: 20px;	
+				}
+				img {
+					width: 70px;
 				}
 			}
-		}
+			#input {
+				button {
+					display: block;
+					margin: 50px auto 0 auto;
+					padding: 20px 50px;
+					background-color: #F32853;
+					font-size: 1.4em;
+					color: #fff;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-weight: bold;
+					border: none;				
+					&:hover {
+						background-color: #f43d64;
+					}
+				}
+			}
+		}		
 	}
 	#freelance-work {
 		padding-top: 50px;
@@ -229,12 +228,14 @@
 	}
 }
 @media screen and (min-width: 1000px){
-	#form-holder {
-		form {
-			width: 400px;
+	#form-area {	
+		#form-holder {
+			form {
+				width: 400px;
+			}
+			.text-area {
+				margin-left: 0px;
+			}
 		}
-		.text-area {
-			margin-left: 0px;
-		}
-	} 		
+	}	 		
 }

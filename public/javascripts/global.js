@@ -9,6 +9,7 @@ var globalApp = function () {
 	return {
 		init: function init() {
 			this.mobileMenu();
+			this.navDropDownActive();
 		},
 		totalAnimateComplete: function totalAnimateComplete() {
 			setTimeout(function () {
@@ -44,7 +45,12 @@ var globalApp = function () {
 					globalApp.elementAnimateComplete('#fun-facts .animate-target');
 				}
 			});
-		}
+		},
+		navDropDownActive:function(){
+			$('.desktop-nav .right-nav > li a').hover(function(){
+				$(this).children();
+			});
+		},
 	};
 }();
 globalApp.init();

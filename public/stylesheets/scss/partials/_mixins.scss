@@ -1,7 +1,10 @@
-
 @mixin transitionBuilder($transEl, $timing, $moveType){
 	transition: $transEl $timing $moveType;
 	-webkit-transition: $transEl $timing $moveType;
 	-moz-transition: $transEl $timing $moveType;
 	-o-transition: $transEl $timing $moveType; 
+}
+@mixin center-margin {
+  margin-left: auto;
+  margin-right: auto;
 }
