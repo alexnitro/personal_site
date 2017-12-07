@@ -46,19 +46,22 @@ setTimeout(addOpacity, 450);
 
 var headerSkills = $('#header-skills li');
 
-function skillsAppear(i){
+function skillsAppear(i,num){
 	setTimeout(function(){
 		headerSkills.eq(i).css({'opacity':'1'})
-	}, 1000)
+	}, num)
 }
 
+var delayNum = 800;
+
 for(var i = 0; i < headerSkills.length; i++){
-	skillsAppear(i);
+	skillsAppear(i,delayNum);
+	delayNum += 500;
 }
 
 //This loads other main body elements on the page once users have reached a particular part during their scroll
 $('.skill-type').click(function(){
-	
+
 	if($(this).hasClass('active')){
 		return false;
 	} else {
@@ -66,7 +69,7 @@ $('.skill-type').click(function(){
 		$(this).addClass('active')
 	}
 
-	if($('.skill-type').eq(1).hasClass('active')){		
+	if($('.skill-type').eq(1).hasClass('active')){
 		$('#marketing-skills').children().removeClass('animate-complete');
 		$('#marketing-skills').removeClass('view',function(){
 			$(this).siblings().addClass('view').delay(350).queue(function(next){

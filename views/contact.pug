@@ -7,7 +7,7 @@ block javaScript
   script(src='/javascripts/formSubmit-min.js')
   script.
     globalApp.totalAnimateComplete();
-    
+
 block content
   section#form-area.pad-top-100
     .container
@@ -35,8 +35,15 @@ block content
               .form-group
                 input#emailInput.form-control(type='email', placeholder='Email', value='')
               .form-group
+                select(name='help_option')
+                  option(value='web_dev') Web Development
+                  option(value='adwords') Google Adwords
+                  option(value='seo') SEO
+                  option(value='ga') Google Analytics
+                  option(value='testing') Website Testing
+              .form-group
                 textarea#helpInput.form-control(placeholder='How can I help?', rows='5', value='')
-              |  
+              |
               button#form-button.btn.btn-default(type='submit', onclick='submitForm()') Submit
   section#freelance-work
     .container
@@ -50,12 +57,12 @@ block content
         .col-md-12
           .image-row
             img(src='/images/house.png')
-            |  
+            |
             img(src='/images/sand-castle.png')
-            |  
+            |
             img(src='/images/hotel.png')
-            |  
+            |
             img(src='/images/house-white.png')
-            |  
+            |
             img(src='/images/shop.png')
-            |  
+            |
