@@ -10,15 +10,19 @@
 	background: -moz-linear-gradient(to right bottom,#131c47,#192152,#474c9a,#ac93d2);
 	#form-holder {
 		width: 90%;
-		margin: 0 auto;		
+		margin: 0 auto;
 		h1 {
 			margin-bottom: 20px;
-			text-align: left;			
+			text-align: left;
 		}
 		p {
 			text-align: left;
 			color: #fff;
-			margin-bottom: 40px;			
+			margin-bottom: 40px;
+		}
+		select {
+			width: 100%;
+			height: 40px;
 		}
 		.icons {
 			width: 90%;
@@ -27,11 +31,11 @@
 			li {
 				float: left;
 				width: 25%;
-				padding: 10px; 				
+				padding: 10px;
 			}
 			img {
 				width: 60px;
-			}			
+			}
 		}
 		#input {
 			button {
@@ -49,12 +53,12 @@
 				-webkit-transition: all .1s linear;
 				-moz-transition: all .1s linear;
 				&:hover {
-					background-color: #f43d64;				
-				}				
+					background-color: #f43d64;
+				}
 			}
 		}
 	}
-}	
+}
 #freelance-work {
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -69,34 +73,34 @@
 @media screen and (min-width: 700px){
 	#form-area {
 		padding-bottom: 80px;
-		padding-top: 140px;	
+		padding-top: 140px;
 		#form-holder {
 			width: 100%;
 			.text-area {
 				float: left;
-				width: 380px;	
+				width: 380px;
 			}
 			form {
 				float: right;
 				width: 300px;
-				padding-top: 5px;			
+				padding-top: 5px;
 			}
 			h1 {
 				margin-top: 0px;
 				text-align: left;
-				color: #fff;			
+				color: #fff;
 			}
 			p {
 				text-align: left;
-				color: #fff;	
+				color: #fff;
 			}
 			.icons {
 				width: 400px;
 				margin: 0 auto;
-				text-align: left;			
+				text-align: left;
 				li {
 					display: inline-block;
-					margin-top: 20px;	
+					margin-top: 20px;
 				}
 				img {
 					width: 70px;
@@ -113,13 +117,13 @@
 					text-decoration: none;
 					text-transform: uppercase;
 					font-weight: bold;
-					border: none;				
+					border: none;
 					&:hover {
 						background-color: #f43d64;
 					}
 				}
 			}
-		}		
+		}
 	}
 	#freelance-work {
 		padding-top: 50px;
@@ -139,7 +143,7 @@
 		}
 		.rounded-image-holder {
 			text-align: center;
-			width: 100%;	
+			width: 100%;
 		}
 		.rounded-image {
 			background: url('/images/alex-looking-homepage.jpg');
@@ -149,8 +153,8 @@
 			height: 200px;
 			margin: 0 auto;
 			border-radius: 50%;
-			border: 3px solid #f2f2f2;	
-		}	
+			border: 3px solid #f2f2f2;
+		}
 		.image-row {
 			text-align: center;
 			margin-top: 30px;
@@ -160,8 +164,8 @@
 				display: inline-block;
 				margin: 0 20px;
 			}
-		}	
-	}	
+		}
+	}
 }
 @media screen and (min-width: 700px) and (max-width: 872px){
 	#form-area {
@@ -219,7 +223,7 @@
 				font-weight: bold;
 				transition: all .1s linear;
 				-webkit-transition: all .1s linear;
-				-moz-transition: all .1s linear;				
+				-moz-transition: all .1s linear;
 				&:hover {
 					background-color: #f43d64;
 				}
@@ -228,7 +232,7 @@
 	}
 }
 @media screen and (min-width: 1000px){
-	#form-area {	
+	#form-area {
 		#form-holder {
 			form {
 				width: 400px;
@@ -237,5 +241,5 @@
 				margin-left: 0px;
 			}
 		}
-	}	 		
+	}
 }
