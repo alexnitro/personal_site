@@ -1,11 +1,11 @@
+globalApp.totalAnimateComplete();
 
 function preventSubmit(evt){
 	evt.preventDefault();
-
 }
 (function(){
 	document.getElementById('form-button').addEventListener('click', preventSubmit, false);
-	console.log("ADDED");
+
 })();
 function submitForm(){
 	var firstName = document.getElementById('firstNameInput').value;
