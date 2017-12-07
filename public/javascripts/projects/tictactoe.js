@@ -308,6 +308,7 @@ var ticTacToe = (function(){
 		} else if(number === 10) {
 			finish.querySelector('p').innerHTML = "NO WINNER..IT'S A TIE";
 		}
+		$('nav').css('opacity',1);
 	} 
 
 	//Reset the game back to its original state after the user has reached the end screen
@@ -348,6 +349,8 @@ var ticTacToe = (function(){
 		} else if(finish.classList.contains('screen-win-two')){
 			finish.classList.remove('screen-win-two');
 		}
+
+		$('nav').css('opacity',0);
 	}	
 
 	/****************************** FIRST RUN STATEMENTS ********************************
@@ -434,6 +437,8 @@ var ticTacToe = (function(){
 		player1Name.innerHTML = player1.firstName + " " + player1.lastName;
 		player2Name.innerHTML = player2.firstName + " " + player2.lastName;
 
+		$('nav').css('opacity',0);
+
 		displayNone(start);
 		displayBlock(board);
 		statusChange();
@@ -441,8 +446,7 @@ var ticTacToe = (function(){
 	});
 
 	//Add an click listner onto the restart game button which appears in the finish section
-	startAgainButton.addEventListener('click', function(){
-
+	startAgainButton.addEventListener('click', function(){		
 		displayNone(finish);
 		displayBlock(board);
 		gameReset();

@@ -1,8 +1,7 @@
 extends layout.pug
 
 block css
-  link(rel='stylesheet' type='text/css' media='screen' href='/stylesheets/projects/form/style.css')
-  link(rel='stylesheet' type='text/css' media='screen' href='/stylesheets/projects/form/form.css')
+  link(rel='stylesheet' type='text/css' media='screen' href='/stylesheets/scss/pages/css/form-min.css')
 
 block javaScript
   script(src='/javascripts/projects/form/select.js')
@@ -10,7 +9,7 @@ block javaScript
   script(src='/javascripts/projects/form/form.js')
 
 block content
-  .container
+  .form-container
     header
       span Register for
       h1 Full Stack Conf

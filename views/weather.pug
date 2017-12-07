@@ -4,6 +4,26 @@ block css
 	link(rel="stylesheet", type="text/css" href="/stylesheets/scss/css/weather-min.css")
 block javaScript
 	script(src="/javascripts/projects/weather.js")
+	- var cityId = geoId;
+	script.
+		var cityId = #{cityId};
+		var dataObj = {
+			id: cityId,
+			APPID: 'b862441ad3354dc7ab88f533b20b96b8'
+		};
+		
+
+		/*$.ajax({
+			url: 'http://api.openweathermap.org/data/2.5/weather?id=2172797&APPID=b862441ad3354dc7ab88f533b20b96b8',
+			type: 'GET',
+			success:function(data){
+				console.log(data);
+			},
+			error:function(error){
+				console.log('FUCK UP');
+			}
+		})*/
+
 
 block content
 	#loader-wrapper

@@ -12,13 +12,12 @@ h1 {
 #question-area {
   margin-bottom: 30px;
   padding-top: 150px;
-  min-height: 800px;
+  min-height: 700px;
   h1 {
     color: #000;
   }
 }
 .form {
-  width: 600px;
   margin-top: 50px;
   @include center-margin;
   form {
@@ -32,6 +31,7 @@ h1 {
   }
 }
 #viewer-area {
+  padding-bottom: 50px;
   .row {
     a {
       padding-top: 20px;
@@ -51,5 +51,8 @@ h1 {
   .nav-links a,
   .nav-links li a {
     color: #000;
+  }
+  .form {
+    width: 600px;
   }
 }

@@ -46,7 +46,6 @@
         this.wikiAjax(beginType);
       },  
       wikiAjax:function(searchType){
-        console.log('BEGIN');
         $.ajax({
           url:'https://en.wikipedia.org/w/api.php',
           type: 'POST',
@@ -55,7 +54,7 @@
           headers: {'Api-User-Agent': 'Example/1.0'},
           success:function(data){
               app.searchResults(data);             
-          },      
+          }      
         });    
       },
       clearHtml:function(el){
@@ -76,6 +75,7 @@
           $(aWrapper).append(newDiv);
           $('#viewer-area .row').append(aWrapper);
         });
-      },
+        $('#question-area').css('min-height','auto');
+      }
     }
 }());

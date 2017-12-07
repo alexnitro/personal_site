@@ -44,131 +44,99 @@ var quoteApp = (function(){
 		  'source' : 'John F. Kennedy',
 		  'tags' : 'politics'    
 		},
-	}	
+	};	
 	return {
 		init:function(){
 			this.addQuotes();
-
+			this.clickEvent();
 		},
 		addQuotes:function(){
 			var quoteNames = Object.keys(quoteObj);
 			quoteNames.forEach(function(quote){
-				quote.push(quoteObj[quote]);
+				quotes.push(quoteObj[quote]);
 			});
 		},
 		clickEvent:function(){
 			var quoteButton = document.getElementById('loadQuote');
 			quoteButton.addEventListener('click',function(){
-				printQuote();
-			}, false);			
+				quoteApp.printQuote();
+			});			
 		},
-		getRandomItem:function(staticArr, uniqueArr){
-			if(!uniqueArr.length){
-				for(var i = 0; i < staticArr.length; i++){
-					uniqueArr.push(i);
+		getRandomQuote:function(){
+			if(!uniqueQuotes.length){
+				for(var i = 0; i < quotes.length; i++){
+					uniqueQuotes.push(i);
+				}
+			}
+			var index = Math.floor(Math.random() * uniqueQuotes.length);
+			var val = uniqueQuotes[index];
+			uniqueQuotes.splice(index, 1);
+			return quotes[val];
+		},
+		getRandomColor:function(){
+			if(!uniqueColors.length){
+				for (var i = 0; i < colors.length; i++){
+					uniqueColors.push(i);
 				}
 			}
 			var index = Math.floor(Math.random() * uniqueColors.length);
-			var val = uniqueArr[index];
-			uniqueArr.splice(index, 1);
+			var val = uniqueColors[index];
+			uniqueColors.splice(index, 1);
 			return val;
 		},
-	}
+		printQuote:function(){
+			var getQuote = this.getRandomQuote();
+			var quote = getQuote.quote;		
+			var sourceQuote = getQuote.source;
+			var citationQuote;
+			var yearQuote;
 
+			//THIS CHECKS THE OBJECT TO SEE IF A PARTICULAR PROPERTY IS "UNDEFINED"
+			if(typeof getQuote.citation === "undefined"){
+				citationQuote = "";
+			} else {
+				citationQuote = getQuote.citation;
+			}
+			if(typeof getQuote.year === "undefined"){
+				yearQuote = "";
+			} else {
+				yearQuote = getQuote.year; 
+			}
+
+			//BEGIN BUILDING THE ELEMENTS TO PLACE INTO THE DOM
+			var printOut = "<p class='quote'>";
+			printOut += quote;
+			printOut += "</p><p class='source'>";
+			printOut += sourceQuote;
+
+			if(citationQuote === "" && yearQuote === ""){
+				printOut += "</p>";
+
+			} else if(citationQuote !== "" && yearQuote === ""){
+				printOut += "<span class='citation'>";
+				printOut += citationQuote;
+				printOut += "</span></p>";
+
+			} else if(citationQuote === "" && yearQuote !== ""){
+				printOut += "<span class='year'>";
+				printOut += yearQuote;
+				printOut += "</span></p>";		
+
+			} else {
+				printOut += "<span class='citation'>";
+				printOut += citationQuote;
+				printOut += "</span>";
+				printOut += "<span class='year'>";
+				printOut += yearQuote;
+				printOut += "</span></p>";	
+			}
+			
+			var randomColorNumber = this.getRandomColor();
+			document.getElementsByTagName('body')[0].style.backgroundColor = colors[randomColorNumber];
+			document.getElementById('loadQuote').style.backgroundColor = colors[randomColorNumber];
+			document.getElementById('quote-box').innerHTML = printOut;
+		}		
+	};
 }());
 
-
-//PULL RANDOM OBJECT FROM QUOTES ARRAY - THIS MAKES IT SO A QUOTE NEVER REPEATS ITSELF WITHIN THE FIRST ROUND OF QUOTES
-function getRandomQuote(){	
-	if(!uniqueQuotes.length){
-		for(var i = 0; i < quotes.length; i++){
-			uniqueQuotes.push(i);
-		}
-	}
-	var index = Math.floor(Math.random() * uniqueQuotes.length);
-	var val = uniqueQuotes[index];
-	uniqueQuotes.splice(index, 1);
-	return quotes[val];
-}
-
-//PULL RANDOM INDEX VALUE FROM COLORS ARRAY - THIS MAKES IT SO A COLOR NEVER REPEATS ITSELF WITHIN THE FIRST ROUND OF COLORS
-function getRandomColor(){
-	if(!uniqueColors.length){
-		for (var i = 0; i < colors.length; i++){
-			uniqueColors.push(i);
-		}
-	}
-	var index = Math.floor(Math.random() * uniqueColors.length);
-	var val = uniqueColors[index];
-	uniqueColors.splice(index, 1);
-	return val;
-}
-
-function getRandomItem(staticArr, uniqueArr){
-	if(!uniqueArr.length){
-		for(var i = 0; i < staticArr.length; i++){
-			uniqueArr.push(i);
-		}
-	}
-	var index = Math.floor(Math.random() * uniqueColors.length);
-	var val = uniqueArr[index];
-	uniqueArr.splice(index, 1);
-	return val;
-}
-
-
-//PRINT RANDOM OBJECT ONTO SCREEN
-function printQuote(){
-	
-	var getQuote = getRandomItem(quotes,uniqueQuotes);
-	var quote = getQuote.quote;		
-	var sourceQuote = getQuote.source;
-	var citationQuote;
-	var yearQuote;
-
-	//THIS CHECKS THE OBJECT TO SEE IF A PARTICULAR PROPERTY IS "UNDEFINED"
-	if(typeof getQuote.citation === "undefined"){
-		citationQuote = "";
-	} else {
-		citationQuote = getQuote.citation;
-	}
-	if(typeof getQuote.year === "undefined"){
-		yearQuote = "";
-	} else {
-		yearQuote = getQuote.year; 
-	}
-
-	//BEGIN BUILDING THE ELEMENTS TO PLACE INTO THE DOM
-	var printOut = "<p class='quote'>";
-	printOut += quote;
-	printOut += "</p><p class='source'>";
-	printOut += sourceQuote;
-
-	if(citationQuote === "" && yearQuote === ""){
-		printOut += "</p>";
-
-	} else if(citationQuote !== "" && yearQuote === ""){
-		printOut += "<span class='citation'>";
-		printOut += citationQuote;
-		printOut += "</span></p>";
-
-	} else if(citationQuote === "" && yearQuote !== ""){
-		printOut += "<span class='year'>";
-		printOut += yearQuote;
-		printOut += "</span></p>";		
-
-	} else {
-		printOut += "<span class='citation'>";
-		printOut += citationQuote;
-		printOut += "</span>";
-		printOut += "<span class='year'>";
-		printOut += yearQuote;
-		printOut += "</span></p>";	
-	}
-	
-	var randomColorNumber = getRandomItem(colors,uniqueColors);
-	document.getElementsByTagName('body')[0].style.backgroundColor = colors[randomColorNumber];
-	document.getElementById('loadQuote').style.backgroundColor = colors[randomColorNumber];
-	document.getElementById('quote-box').innerHTML = printOut;
-
-}
+quoteApp.init();

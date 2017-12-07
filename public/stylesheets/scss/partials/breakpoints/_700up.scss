@@ -80,11 +80,17 @@
 			.dropdown {
 				position: absolute;
 				background-color: #000;
+				display: none;
 				border-radius: 4px;
 				width: 280px;
 				padding: 10px;
 				left: -100px;
-				top: 50px;
+				top: 40px;
+				opacity: 0;
+				&.active {
+					opacity: 1;
+					display: block;
+				}
 				&:after {
 					width: 0;
 					height: 0;
@@ -101,6 +107,9 @@
 					margin-left: 0px;
 					padding-left: 10px;
 					padding-top: 10px;				
+				}
+				a {
+					color: $whiteColor;
 				}
 			}	
 		}

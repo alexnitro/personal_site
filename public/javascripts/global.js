@@ -9,7 +9,7 @@ var globalApp = function () {
 	return {
 		init: function init() {
 			this.mobileMenu();
-			this.navDropDownActive();
+			//this.navDropDownActive();
 		},
 		totalAnimateComplete: function totalAnimateComplete() {
 			setTimeout(function () {
@@ -47,10 +47,12 @@ var globalApp = function () {
 			});
 		},
 		navDropDownActive:function(){
-			$('.desktop-nav .right-nav > li a').hover(function(){
-				$(this).children();
-			});
-		},
+			$('.desktop-nav .right-nav > li').hover(function(){
+				if($(this).children().hasClass('dropdown')){
+					$(this).children('.dropdown').addClass('active');
+				}
+			});			
+		}
 	};
 }();
 globalApp.init();
