@@ -54,5 +54,9 @@ router.get('/project/wikipedia', (req,res,next) => {
 	res.locals.projects = 'wikipedia';
 	res.render('wikipedia');
 });
+router.post('/contact', (req,res) => {
+	console.log(req.body);
+	res.send('Contact has been made with the backend');
+})
 
 module.exports = router;
