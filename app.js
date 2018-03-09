@@ -6,7 +6,6 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const requestIp = require('request-ip');
-const gatherIp = require('./modules/getCityfromIp.js');
 const index = require('./routes/router');
 const app = express();
 
@@ -23,7 +22,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
 app.use(requestIp.mw());
-app.use(gatherIp);
 
 app.use('/', index);
 
