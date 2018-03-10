@@ -10,6 +10,7 @@ const index = require('./routes/router');
 const app = express();
 
 // view engine setup
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
@@ -42,5 +43,11 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+const PORT = app.get('port');
+
+app.listen(PORT,function(){
+	console.log('Process has now begun');
+})
 
 module.exports = app;

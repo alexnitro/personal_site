@@ -1,3 +1,16 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import './partials/footer-bottom';
+@import './partials/functions';
+@import './partials/mixins';
+@import './partials/typography';
+@import './partials/variables';
+
+@import './partials/breakpoints/base';
+@import './partials/breakpoints/700up';
+@import './partials/breakpoints/800up';
+@import './partials/breakpoints/1000up';
+@import './partials/breakpoints/tablet';
+
 @media screen and (min-width: 700px){
 	.container {
 		width: 90%;
@@ -13,7 +26,7 @@
 		-moz-transition: all .8s cubic-bezier(0,0.99,0.29,1.02);
 		transition-delay: .1s;
 		-webkit-transition-delay: .1s;
-		-moz-transition-delay: .1s;	
+		-moz-transition-delay: .1s;
 	}
 	.animate-left {
 		transform: translate(-25px, 0);
@@ -24,7 +37,7 @@
 		-moz-transition: all .8s cubic-bezier(0,0.99,0.29,1.02);
 		transition-delay: .1s;
 		-webkit-transition-delay: .1s;
-		-moz-transition-delay: .1s;	
+		-moz-transition-delay: .1s;
 
 	}
 	.animate-complete {
@@ -77,7 +90,7 @@
 				margin-left: 45px;
 				font-size: 1em;
 				color: white;
-				padding: 10px 0 10px 0;	
+				padding: 10px 0 10px 0;
 			}
 		}
 	}
@@ -124,7 +137,7 @@
 		a {
 			text-decoration: none;
 			color: white;
-			font-size: 1.6em;		
+			font-size: 1.6em;
 		}
 	}
 	.nav-items {
@@ -180,14 +193,14 @@
 		text-align: left;
 		p {
 			width: 100%;
-			text-align: left;	
+			text-align: left;
 		}
 	}
 	.image.rounded {
 		margin-right: 5%;
 		img {
 			max-width: 200px;
-			width: 100%;		
+			width: 100%;
 		}
 	}
 	.feature-col {
@@ -198,7 +211,7 @@
 				&.rounded {
 					float: right;
 					margin-left: 5%;
-					margin-right: 0px;				
+					margin-right: 0px;
 				}
 			}
 			.content {
@@ -210,30 +223,12 @@
 			}
 		}
 	}
-
-	/*************************  FOOTER ******************************/
+/*************************  FOOTER ******************************/
 
 	footer {
 		width: 100%;
-
 	}
 }
-/************************* IPAD FIXES ******************************/
-
-@media screen and (min-width: 700px) and (max-width: 872px) {
-	/************************* HOMEPAGE ******************************
-	********************************************************************/
-
-
-	/************************* ABOUT PAGE ******************************
-	********************************************************************/
-
-
-	/************************* CONTACT PAGE ******************************
-	********************************************************************/
-
-}
-/************************** LARGE DESKTOP FIXES *************************/
 
 @media screen and (min-width: 1000px) {
 	.desktop-nav .container {
@@ -244,20 +239,6 @@
 		margin-left: 0px;
 
 	}
-	/************************* HOMEPAGE ******************************
-	********************************************************************/
-
-
-	/************************* ABOUT PAGE ******************************
-	********************************************************************/
-
-
-	/************************* CONTACT PAGE ******************************
-	********************************************************************/
-
-	/************************* CONTACT PAGE ******************************
-	********************************************************************/
-
 }
 @media screen and (min-height: 800px){
 	footer.keep-bottom {

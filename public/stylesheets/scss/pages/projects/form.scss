@@ -1,10 +1,11 @@
-@import '../../global';
+@import './../../partials/variables';
+@import './../../partials/mixins';
 
 .dropcontainer {
 	position:relative;
 	font-size: 16px;
 	color: #777;
-	} 
+	}
 
 .trigger {
 	color: #777;
@@ -19,7 +20,7 @@
 	box-sizing: border-box;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease; 
+	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
 .trigger:hover {
@@ -62,9 +63,9 @@
 }
 .dropcontainer ul li {
 	padding: 5px;
-	-webkit-transition: all 0.5s ease; 
-	-moz-transition: all 0.5s ease; 
-	-o-transition: all 0.5s ease; 
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
 .dropcontainer ul li:hover {
@@ -87,7 +88,7 @@
 	position:relative;
 	font-size: 16px;
 	color: #777;
-} 
+}
 .trigger_demo2 {
 	color: #777;
 	padding: 10px;
@@ -101,7 +102,7 @@
 	box-sizing: border-box;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease; 
+	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
 .trigger_demo2:hover {
@@ -144,9 +145,9 @@
 }
 .dropcontainer_demo2 ul li {
 	padding: 5px;
-	-webkit-transition: all 0.5s ease; 
-	-moz-transition: all 0.5s ease; 
-	-o-transition: all 0.5s ease; 
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
 .dropcontainer_demo2 ul li:hover {
@@ -171,7 +172,7 @@
 }
 
 
-/* ================================= 
+/* =================================
   Base Element Styles
 ==================================== */
 
@@ -192,7 +193,7 @@ body {
 }
 
 header {
-	text-align: center;  
+	text-align: center;
 }
 
 h1 {
@@ -206,7 +207,7 @@ a {
   color: #888;
 }
 
-/* ================================= 
+/* =================================
   Form Element Styles
 ==================================== */
 
@@ -228,7 +229,7 @@ fieldset {
 
 legend,
 button {
-	font-size: 1.25em;	
+	font-size: 1.25em;
 }
 
 legend {
@@ -259,7 +260,7 @@ label {
 
 input,
 select {
-	margin-bottom: 1.125em;	
+	margin-bottom: 1.125em;
 }
 
 input {
@@ -294,7 +295,7 @@ button:hover {
 	background: #184c62;
 }
 
-/* ================================= 
+/* =================================
   jQuery Actions
 ==================================== */
 
@@ -322,7 +323,7 @@ button:hover {
 
 }
 
-/* ================================= 
+/* =================================
   Page Styles
 ==================================== */
 
@@ -351,7 +352,7 @@ button:hover {
 	margin-top: 1.25em;
 }
 
-/* ================================= 
+/* =================================
   Helper Classes
 ==================================== */
 
@@ -365,7 +366,7 @@ button:hover {
   clear: both;
 }
 
-/* ================================= 
+/* =================================
   Media Queries
 ==================================== */
 
@@ -396,13 +397,13 @@ button:hover {
 	}
 }
 
-/* ================================= 
+/* =================================
   Dropdown Adjustments
 ==================================== */
 
 #size.adjust-width {
 	width: 20%;
-	float: left; 
+	float: left;
 
 }
 #size ul {

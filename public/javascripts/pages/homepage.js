@@ -1,6 +1,4 @@
 
-//@codekit-prepend "/../main.js"
-
 $(".hamburger-menu-desktop").click(function() {
 	$("#right-nav").animate({right: '-100px'}, 500);
 });

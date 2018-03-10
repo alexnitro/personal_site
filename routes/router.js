@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', (req,res,next) => {
-	res.locals.title = "My Wonderful Website";
+	res.locals.title = "Melbourne Freelance Web Developer";
 	res.locals.page = "homepage";
 	res.locals.pageType = 'main';
 	res.render('index')

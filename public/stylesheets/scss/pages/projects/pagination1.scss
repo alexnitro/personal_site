@@ -1,14 +1,15 @@
-@import '../../global';
+@import './../../partials/variables';
+@import './../../partials/mixins';
 
 body{
   background-color: #e1f1f6;
   color: #222;
 }
-.cf:after { 
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
+.cf:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
    clear: both;
 }
 .page{
@@ -135,7 +136,7 @@ body{
   }
     .no-users-message {
       font-size: 20px;
-      color: #fff;  
+      color: #fff;
     }
 .pagination{
   text-align: center;

@@ -1,4 +1,5 @@
-@import '../global';
+@import './../partials/variables';
+@import './../partials/mixins';
 
 .col-md-12 {
 	padding-left: 0px;
@@ -29,7 +30,7 @@
 				margin: 0 auto 10px auto;
 				line-height: 30px;
 			}
-		}		
+		}
 	}
 	.photo80 {
 		margin: 0 auto;
@@ -47,7 +48,7 @@
 			}
 			&.palms2 {
 				left: 210px;
-			}			
+			}
 		}
 	}
 	.photo-row {
@@ -62,15 +63,15 @@
 				box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
 				border-radius: 5px;
 				margin: 5px;
-				background-color: #e2e2e2;		
+				background-color: #e2e2e2;
 				img {
 					width: 120px;
 					height: 120px;
-					border-radius: 5px;					
-				}		
+					border-radius: 5px;
+				}
 			}
-		}				
-	}	
+		}
+	}
 }
 #skills {
 	min-height: 600px;
@@ -99,9 +100,9 @@
 	.large-icon {
 		img {
 			width: 200px;
-		}		
+		}
 	}
-}	
+}
 #fun-facts {
 	min-height: 600px;
 	padding-top: 40px;
@@ -119,7 +120,7 @@
 			margin: 0 auto;
 			font-size: 1.2em;
 			padding: 10px 0px;
-			text-align: center;			
+			text-align: center;
 		}
 	}
 	.large-icon {
@@ -152,7 +153,7 @@
 		h1 {
 			margin: 20px auto 30px auto;
 			text-align: left;
-			color: #fff;		
+			color: #fff;
 		}
 		.text-area {
 			float: left;
@@ -163,12 +164,12 @@
 					font-size: 1.3em;
 					margin: 0 auto 30px auto;
 					text-align: left;
-					line-height: 30px;			
+					line-height: 30px;
 				}
 				&:nth-of-type(2){
 					text-align: left;
 					margin: 0 auto 10px auto;
-					line-height: 30px;			
+					line-height: 30px;
 				}
 			}
 		}
@@ -179,7 +180,7 @@
 			text-align: center;
 			padding-top: 10px;
 			padding-right: 0px;
-			position: relative;		
+			position: relative;
 			img {
 				width: 300px;
 				border-radius: 6px;
@@ -210,10 +211,10 @@
 					img {
 						width: 120px;
 						height: 120px;
-						border-radius: 5px;					
-					}				
+						border-radius: 5px;
+					}
 				}
-			}		
+			}
 		}
 	}
 	#skills {
@@ -226,7 +227,7 @@
 			top: 0px;
 			max-width: 1040px;
 			width: 90%;
-			margin: 0 auto;			
+			margin: 0 auto;
 		}
 		.skill-text {
 			&:nth-of-type(1){
@@ -244,8 +245,8 @@
 					font-size: 1.2em;
 					padding: 10px 0px;
 					&:nth-of-type(4){
-						margin-bottom: 25px;				
-					}				
+						margin-bottom: 25px;
+					}
 				}
 			}
 		}
@@ -264,11 +265,11 @@
 		padding: 130px 0px;
 		.text-area {
 			float: left;
-			margin-left: 100px;			
+			margin-left: 100px;
 		}
 		.large-icon {
 			float: right;
-			padding-top: 30px;	
+			padding-top: 30px;
 		}
 		h3 {
 			margin-bottom: 40px;
@@ -279,10 +280,10 @@
 				margin: 0 auto;
 				font-size: 1.2em;
 				padding: 10px 0px;
-				text-align: center;				
+				text-align: center;
 			}
 		}
-	}	
+	}
 }
 @media screen and (min-width: 700px) and (max-width: 872px) {
 	#about .photo80 {
@@ -340,5 +341,5 @@
 	#fun-facts .text-area {
 		margin-top: 30px;
 
-	}	
+	}
 }

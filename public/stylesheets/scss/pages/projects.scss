@@ -1,4 +1,6 @@
-@import '../global';
+@import './../partials/variables';
+@import './../partials/mixins';
+
 
 #current-projects {
 	padding-top: 75px;
@@ -34,16 +36,16 @@
 			transition: all .2s linear;
 			-webkit-transition: all .2s linear;
 			-moz-transition: all .2s linear;
-		}		
+		}
 	}
 	#project-list {
 		margin: 0 auto;
 		text-align: center;
-		float: none;	
+		float: none;
 		img {
 			width: 60px;
-			margin: 0px 5px;			
-		}	
+			margin: 0px 5px;
+		}
 	}
 }
 #current {
@@ -63,7 +65,7 @@
 			@include transitionBuilder(color, .4s, linear);
 			&.active {
 				color: $redColor;
-			}			
+			}
 		}
 	}
 	.project-holder {
@@ -81,7 +83,7 @@
 			}
 		}
 	}
-	.project { 
+	.project {
 		text-align: center;
 		padding-left: 0px;
 		padding-right: 0px;
@@ -93,17 +95,17 @@
 			width: 300px;
 			margin: 0 auto;
 			position: relative;
-			overflow: hidden;	
+			overflow: hidden;
 			p {
 				margin-bottom: 20px;
-				font-size: 20px;				
+				font-size: 20px;
 			}
 			img {
 				width: 200px;
 			}
 			svg {
 				width: 195px;
-			}			
+			}
 		}
 	}
 }
@@ -135,25 +137,25 @@
 				&:nth-of-type(3),
 				&:nth-of-type(4){
 					margin-bottom: 0px;
-				}		
+				}
 			}
 		}
 		#content-area {
 			float: left;
 			width: 400px;
-			text-align: left;		
+			text-align: left;
 			h1 {
 				padding-top: 0px;
 				margin-bottom: 45px;
 				margin-top: 0px;
-				color: #fff;			
+				color: #fff;
 			}
 			.desc {
 				width: 100%;
 				text-align: left;
 				margin: 0;
 				color: #fff;
-				line-height: 25px;			
+				line-height: 25px;
 			}
 			.button-clear {
 				color: #fff;
@@ -173,7 +175,7 @@
 				-moz-transition: all .2s linear;
 				&:hover {
 					border: 2px solid #FFF;
-				}			
+				}
 			}
 		}
 	}
@@ -181,7 +183,7 @@
 		padding-bottom: 75px;
 		.container {
 			max-width: 1000px;
-		}	
+		}
 		h2 {
 			font-size: 40px;
 		}
@@ -200,10 +202,10 @@
 					width: 250px;
 					min-height: 322px;
 					margin: 0 auto;
-				}		
+				}
 			}
-		}	
-	}	
+		}
+	}
 }
 @media screen and (min-width: 700px) and (max-width: 872px) {
 	#current-projects {

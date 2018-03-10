@@ -1,4 +1,5 @@
-@import '../../global';
+@import './../../partials/variables';
+@import './../../partials/mixins';
 
 @charset "UTF-8";
 body {
@@ -192,7 +193,7 @@ input.missing {
 
 #start a {
   width: 100%;
-  margin: 30px auto 0 auto; 
+  margin: 30px auto 0 auto;
 
 }
 
@@ -250,7 +251,7 @@ input.missing {
       line-height: 0;
       z-index: -1; }
   .screen-win-tie {
-    background: #54D17A; }   
+    background: #54D17A; }
   .screen-win-one {
     background: #FFA000; }
     .screen-win-one .button {
@@ -321,7 +322,7 @@ input.missing {
   font-size: 60px;
   left: 50%;
   width: 15%;
-  margin-left: -7.5%; 
+  margin-left: -7.5%;
 
 }
 
@@ -339,21 +340,21 @@ input.missing {
     padding: 1.75em;
     cursor: pointer;
     box-sizing: border-box;
-    transition: 0.2s ease; 
+    transition: 0.2s ease;
     background-size: 100px 100px;
     background-repeat: no-repeat;
     background-position: center center;}
     .boxes .box:nth-child(3n) {
       margin-right: 0; }
     .boxes .box-filled-1 {
-      
+
       background-image: url(/images/projects/o.svg); }
 
     .boxes .box-filled-1.filled {
       background-color: #FFA000;
     }
     .boxes .box-filled-2 {
-      
+
       background-image: url(/images/projects/x.svg); }
     .boxes .box-filled-2.filled {
       background-color: #3688C3;;

@@ -1,4 +1,5 @@
-@import '../../global';
+@import './../../partials/variables';
+@import './../../partials/mixins';
 
 body {
   /*text-align: center;*/
@@ -26,7 +27,7 @@ body {
   position: relative;
   margin: 0;
   color: #fff;
-  } 
+  }
 .quote:before, .quote:after {
   font-size: 6rem;
   line-height: 2.5rem;

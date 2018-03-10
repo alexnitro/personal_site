@@ -1,4 +1,3 @@
-//@codekit-prepend "/../main.js"
 (function(){
 	var button = document.getElementsByClassName('button-clear')[0];
 	$(button).click(function(){

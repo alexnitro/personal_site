@@ -1,2 +1,0 @@
-"use strict";function preventSubmit(t){t.preventDefault(),submitPost({name:document.getElementById("firstNameInput").value})}function submitPost(t){console.log("ATTEMPTING SUBMIT"),$.ajax({url:"/contact",type:"POST",data:t,success:function t(e){console.log(e)}}).fail(function(){console.log("MAJOR ERROR")})}globalApp.totalAnimateComplete(),document.getElementById("form-button").addEventListener("click",preventSubmit,!1);
-//# sourceMappingURL=./contact-min.js.map
