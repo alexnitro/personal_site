@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "gulp",
-    "test": "node app.js"
+    "dev": "gulp",
+    "start": "node app.js"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
