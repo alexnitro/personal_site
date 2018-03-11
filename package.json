@@ -22,11 +22,13 @@
     "maxmind": "^2.2.0",
     "morgan": "~1.8.1",
     "node-fetch": "^2.1.1",
+    "popper.js": "^1.12.9",
     "promise": "^8.0.1",
     "pug": "~2.0.0-beta11",
     "request-ip": "^2.0.2",
     "rimraf": "^2.6.2",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "tooltip.js": "^1.1.7"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

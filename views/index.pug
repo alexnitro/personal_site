@@ -1,10 +1,13 @@
 extends layout
 
+block metaSeo
+	title Melbourne Web Developer
+
 block css
-	link(rel="stylesheet", type="text/css" href="/stylesheets/scss/css/homepage-min.css")
+	link(rel="stylesheet", type="text/css" href="/css/pages/homepage.css")
 
 block javaScript
-	script(src='/javascripts/pages/dist/homepage-min.js')
+	script(src='/js/homepage.js')
 
 block content
 	section#top.pad-top-100
@@ -12,26 +15,26 @@ block content
 			#homepage-content.container
 				h1.center Hi I'm Alex
 				#header-image.center
-					img(src="/images/alex-homepage.jpg")
+					img(src="/img/alex-homepage.jpg")
 				#skill-section.row
 					#header-skills.col-md-12.center
 						ul
 							li.float-left Marketer
 								.skill-logo
-									img(src="/images/diagram.png")
+									img(src="/img/diagram.png")
 							li.float-left Developer
 								.skill-logo
-									img(src="/images/computer.png")
+									img(src="/img/computer.png")
 							li.float-left Traveler
 								.skill-logo
-									img(src="/images/mountain.png")
+									img(src="/img/mountain.png")
 	section#one.clear
 		.container
 			.row
 				.col-md-4.col-sm-12.header
 					h2 A little something about me
 					.image-holder
-						img(src="/images/alex-teeth.jpg")
+						img(src="/img/alex-teeth.jpg")
 				.col-md-7.offset-md-1.col-sm-12.header-text.center.pt-4
 					p Hi there, and thanks again for stopping by. My name is Alex Acker and I'm an experienced marketer and now Web Developer currently based in Melbourne, Australia. For the longest time my roots have been based in digital performance marketing but have seen grown to include Web Analytics and Site Testing and Planning If you're looking for some work in consulting please contact me via one of my social profiles.
 					br

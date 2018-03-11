@@ -2,11 +2,10 @@
 
 import $ from 'jquery';
 
-import './bootstrap.js';
-
 window.$ = $;
 window.jQuery = $;
 
+import 'bootstrap';
 
 //THIS IS THE GLOBAL JS FILE WHICH WILL LOAD ON EACH PAGE
 //All new methods, functions, or JS code that needs to load on each page should be written here.
@@ -17,7 +16,7 @@ var globalApp = function () {
 	return {
 		init: function init() {
 			this.mobileMenu();
-			//this.navDropDownActive();
+			this.navDropDownActive();
 		},
 		totalAnimateComplete(){
 			setTimeout(function () {
@@ -56,12 +55,26 @@ var globalApp = function () {
 		},
 		navDropDownActive(){
 			$('.desktop-nav .right-nav > li').hover(function(){
-				if($(this).children().hasClass('dropdown')){
-					$(this).children('.dropdown').addClass('active');
+				if($(this).children().hasClass('dropdown-contain')){
+					let $dropDown = $(this);
+					$dropDown.children('.dropdown-contain').css('display','block');
+					setTimeout(function(){
+						$dropDown.children('.dropdown-contain').addClass('active');
+					},100)
+				}
+			}, function(){
+				if($(this).children().hasClass('dropdown-contain')){
+					let $dropDown = $(this);
+					setTimeout(function(){
+						$dropDown.children('.dropdown-contain').css('display','none')
+					},400)
+					$dropDown.children('.dropdown-contain').removeClass('active');
 				}
 			});
 		}
 	};
 }();
+
+
 globalApp.init();
 window.globalApp = globalApp;

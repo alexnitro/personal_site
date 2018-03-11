@@ -1,10 +1,13 @@
-extends layout.pug 
+extends layout.pug
+
+block metaSeo
+  title Current and Previous Projects
 
 block css
-  link(rel="stylesheet", type="text/css" href="/stylesheets/scss/css/projects-min.css")
+  link(rel="stylesheet", type="text/css" href="/css/pages/projects.css")
 
 block javaScript
-  script(src='/javascripts/pages/dist/projects-min.js')
+  script(src='/js/projects-page.js')
   script.
     globalApp.totalAnimateComplete();
 
@@ -16,7 +19,7 @@ block javaScript
       $('.project-done').eq(index).addClass('active');
     });
 
-block content  
+block content
   section#current-projects.pad-top-100
     .container
       .row
@@ -26,32 +29,27 @@ block content
             | From jQuery drawings to Javascript click function, my projects are all a part of my coding and learning experiences. While they are currently live they always being updated and tweaked to help improve myself the users experience.
           .button-clear Get into it
         #project-list.animate-right
-          img(src='/images/projects/atm.svg')
-          |  
-          img(src='/images/projects/briefcase.svg')
-          |  
-          img(src='/images/projects/cart.svg')
-          |  
-          img(src='/images/projects/presentation.svg')
+          img(src='/img/projects/atm.svg')
+          |
+          img(src='/img/projects/briefcase.svg')
+          |
+          img(src='/img/projects/cart.svg')
+          |
+          img(src='/img/projects/presentation.svg')
   section#current
     .container
       h2.center What&apos;s I&apos;ve Got Done
       .project-status
-        span.category.active Treehouse
-        |  
-        span |
-        |  
-        span.category freeCodeCamp
+        span.category.active React
         |
         span |
         |
-        span.category Udacity
+        span.category JavaScript Projects
         |
         span |
         |
         span.category Nitro (My Job)
       .project-holder
-        include _partials/projects/_treehouse.pug
-        include _partials/projects/_codecamp.pug        
+        include _partials/projects/_react.pug
         include _partials/projects/_udacity.pug
         include _partials/projects/_nitro.pug

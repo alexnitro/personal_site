@@ -1,6 +1,5 @@
 (function(){
-	var button = document.getElementsByClassName('button-clear')[0];
-	$(button).click(function(){
+	$('.button-clear').click(function(){
 		$('html,body').animate({
 			scrollTop: $('#current').offset().top
 		}, 600);

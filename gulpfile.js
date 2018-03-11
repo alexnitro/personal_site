@@ -13,12 +13,13 @@ var sequence =			require('run-sequence');
 var PRODUCTION = !!(yargs.argv.production)
 
 var $ = gulpPlugins();
+var watching = false;
 
 function handleSuccess(file){
-	return `${file} succesfully compiled`;
+	return `${file.relative} succesfully compiled`;
 }
 function handleError(file){
-	return `${file} did not compile succesfully`;
+	return `${file.relative} did not compile succesfully`;
 }
 
 gulp.task('clean',function(cb){
@@ -28,9 +29,12 @@ gulp.task('clean',function(cb){
 gulp.task('sass',function(){
 	return gulp.src('./public/stylesheets/scss/**/*.scss')
 	.pipe($.cached('sass'))
+	.pipe($.if(watching, $.using({color:'green',filesize:true})))
+	.pipe(sassInheritcance({dir:'./public/stylesheets/scss'}))
 	.pipe($.sourcemaps.init())
 	.pipe($.sass().on('error',$.sass.logError))
 	.pipe($.sourcemaps.write())
+	.pipe($.if(watching,$.notify(handleSuccess)))
 	.pipe(gulp.dest('./dist/css'))
 });
 
@@ -64,6 +68,7 @@ gulp.task('javascript',function(){
 	.pipe(named())
 	.pipe(webPackStream(webpackConfig, webpack))
 	.pipe($.sourcemaps.write())
+	.pipe($.if(watching,$.notify(handleSuccess)))
 	.pipe(gulp.dest('./dist/js'))
 });
 
@@ -73,6 +78,7 @@ gulp.task('images',function(){
 	.pipe($.if(PRODUCTION, $.imagemin({
 		progressive:true
 	})))
+	.pipe($.if(watching,$.notify(handleSuccess)))
 	.pipe(gulp.dest('./dist/img'))
 })
 
@@ -85,9 +91,12 @@ gulp.task('watch:js', function(){
 gulp.task('watch:img',function(){
 	gulp.watch('./publicimages/**/*',['images'])
 })
+gulp.task('setwatch',function(){
+	watching = true;
+})
 
 gulp.task('default',function(){
-	sequence('clean',['sass','javascript','images','watch:sass','watch:js','watch:img'],'nodemon')
+	sequence('clean',['sass','javascript','images','watch:sass','watch:js','watch:img'],'setwatch','nodemon',)
 })
 
 

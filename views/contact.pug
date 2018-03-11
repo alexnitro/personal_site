@@ -1,10 +1,13 @@
 extends layout.pug
 
+block metaSeo
+  title Contact Me
+
 block css
-  link(rel="stylesheet", type="text/css" href="/stylesheets/scss/css/contact-min.css")
+  link(rel="stylesheet", type="text/css" href="/css/pages/contact.css")
 
 block javaScript
-  script(src='/javascripts/pages/dist/contact-min.js')
+  script(src='/js/contact.js')
 
 block content
   section#form-area.pad-top-100
@@ -17,13 +20,13 @@ block content
             .icons
               ul
                 li
-                  img(src='/images/speedometer.png')
+                  img(src='/img/speedometer.png')
                 li
-                  img(src='/images/science.png')
+                  img(src='/img/science.png')
                 li
-                  img(src='/images/arrow.png')
+                  img(src='/img/arrow.png')
                 li
-                  img(src='/images/business-site.png')
+                  img(src='/img/business-site.png')
           form.animate-right
             #input
               .form-group
@@ -54,13 +57,13 @@ block content
       .row
         .col-md-12
           .image-row
-            img(src='/images/house.png')
+            img(src='/img/house.png')
             |
-            img(src='/images/sand-castle.png')
+            img(src='/img/sand-castle.png')
             |
-            img(src='/images/hotel.png')
+            img(src='/img/hotel.png')
             |
-            img(src='/images/house-white.png')
+            img(src='/img/house-white.png')
             |
-            img(src='/images/shop.png')
+            img(src='/img/shop.png')
             |

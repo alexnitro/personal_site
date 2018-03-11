@@ -1,7 +1,10 @@
 extends layout.pug
 
+block metaSeo
+	title About Me
+
 block css
-	link(rel="stylesheet", type="text/css" href="/stylesheets/scss/css/about-min.css")
+	link(rel="stylesheet", type="text/css" href="/css/pages/about.css")
 block javaScript
 	script.
 		globalApp.elementAnimateComplete('#about .animate-left,#about .animate-right');
@@ -17,21 +20,21 @@ block content
 						p.center Marketing and Front End Developer based in Melbourne, Australia
 						p.center I enjoy blending marketing and web development to improve experiences and efficient. What I'm not coding or marketing, you'll find me at the local pub watching soccer or playing tennis.
 					.col-md-4.photo80.animate-right
-						img(src="/images/computer.png")
-						img(src="/images/summer.png").palms
-						img(src="/images/summer.png").palms.palms2
+						img(src="/img/computer.png")
+						img(src="/img/summer.png").palms
+						img(src="/img/summer.png").palms.palms2
 			.row
 				.col-md-12
 					.photo-row
 						ul
 							li
-								img(src="/images/melbourne/melbourne-rooftop.jpg")
+								img(src="/img/melbourne/melbourne-rooftop.jpg")
 							li
-								img(src="/images/likers.jpg")
+								img(src="/img/likers.jpg")
 							li
-								img(src="/images/propaganda.jpg")
+								img(src="/img/propaganda.jpg")
 							li
-								img(src="/images/alex-teeth.jpg")
+								img(src="/img/alex-teeth.jpg")
 	#skills
 		.container
 			.row
@@ -46,12 +49,12 @@ block content
 					.skill-text.animate-right
 						h3.center Developer
 						ul
-							li HTML
-							li CSS3
-							li jQuery
-							li JavaScript
+							li Web Design and Development
+							li Express JS
+							li React/Redux
+							li Gulp and Wepback
 					.large-icon
-						img(src="/images/laptop.png")
+						img(src="/img/laptop.png")
 	#fun-facts
 		.container
 			.row
@@ -64,4 +67,4 @@ block content
 							li Coffee is an addition and it's got me good
 							li I'm from LA but Melbourne is my true home.
 					.large-icon.animate-right.animate-target
-						img(src="/images/can.png")
+						img(src="/img/can.png")

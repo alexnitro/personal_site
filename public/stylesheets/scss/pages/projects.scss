@@ -70,6 +70,7 @@
 	}
 	.project-holder {
 		min-height: 1600px;
+		position: relative;
 		.project-done {
 			position: absolute;
 			opacity: 0;
@@ -96,6 +97,10 @@
 			margin: 0 auto;
 			position: relative;
 			overflow: hidden;
+			transition: transform .2s linear;
+			&:hover {
+				transform: translateY(-4px);
+			}
 			p {
 				margin-bottom: 20px;
 				font-size: 20px;
